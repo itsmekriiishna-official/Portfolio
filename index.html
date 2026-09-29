@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rachel How — Designer, YouTuber, Video Lead at Mobbin</title>
+  <meta name="description" content="Rachel How is a designer, YouTuber, and Video Lead at Mobbin. Sharing design resources, tools, and fun experiments.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="Web%20Pages/styles.css">
+</head>
+<body>
+  <!-- Grain Background Noise Overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Mobile Top Bar Header -->
+  <header class="mobile-header">
+    <a href="#home" class="mobile-logo nav-link" data-page="home">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 8C6 6.89543 6.89543 6 8 6H16C19.3137 6 22 8.68629 22 12C22 15.3137 19.3137 18 16 18H6V8Z" stroke="#111111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6 18H16L22.5 26" stroke="#111111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M26 6V26" stroke="#111111" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <span>Rachel How</span>
+    </a>
+    <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+  </header>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-top">
+      <!-- Monogram Logo -->
+      <a href="#home" class="logo-link nav-link" data-page="home" aria-label="Rachel How Home">
+        <svg class="rh-logo" width="34" height="34" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 8C6 6.89543 6.89543 6 8 6H15.5C18.5376 6 21 8.46243 21 11.5C21 14.5376 18.5376 17 15.5 17H6V8Z" stroke="#111111" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M6 17H14.5L21 26" stroke="#111111" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M26 6V26" stroke="#111111" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </a>
+
+      <!-- Primary Navigation Links -->
+      <nav class="nav-menu">
+        <div class="nav-group">
+          <a href="#home" class="nav-item nav-link active" data-page="home">Home</a>
+          <a href="Resources/" class="nav-item">Resources</a>
+          <a href="Tools/" class="nav-item">Tools</a>
+          <a href="Cursors/" class="nav-item">Cursors</a>
+        </div>
+        
+        <div class="nav-group nav-group-secondary">
+          <a href="About/" class="nav-item">About</a>
+          <a href="Work/" class="nav-item">Work</a>
+          <a href="Field%20Notes/" class="nav-item">Field Notes</a>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Sidebar Bottom Footer -->
+    <div class="sidebar-bottom">
+      <!-- Live Clock -->
+      <div class="live-clock-container">
+        <span class="clock-time" id="liveClock">04:25:00 PM</span>
+        <span class="clock-tz">MYT</span>
+      </div>
+
+      <!-- Social Media Icons -->
+      <div class="social-links">
+        <a href="https://youtube.com/@rachelhow" target="_blank" rel="noopener" aria-label="YouTube" class="social-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+        </a>
+        <a href="https://twitter.com/rachelworship" target="_blank" rel="noopener" aria-label="Twitter / X" class="social-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/rachelhow" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        <a href="https://instagram.com/rachelhow" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>
+        <a href="mailto:rachel@rachelhow.com" aria-label="Email" class="social-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content Stage -->
+  <main class="main-content">
+    
+    <!-- PAGE 1: HOME -->
+    <section id="page-home" class="page-section active">
+      <div class="hero-header">
+        <h1 class="hero-bio-title">
+          <span class="bio-dark">Hi, I’m Rachel How.</span>
+          <span class="bio-serif">Designer. YouTuber. Video Lead at Mobbin. Mom to a crazy frenchie. Foodie.</span>
+        </h1>
+        <p class="section-subhead">Fun experiments I did recently ◡̈</p>
+      </div>
+
+      <!-- Bento Masonry Cards Grid (2 Columns matching original website layout) -->
+      <div class="bento-grid">
+        <!-- Left Column -->
+        <div class="bento-col bento-left">
+          
+          <!-- Card 1: DeskSlope -->
+          <article class="bento-card deskslope-card">
+            <div class="card-image-wrap">
+              <img src="assets/images/deskslope_3d.jpg" alt="DeskSlope Snowboard Game" loading="lazy">
+            </div>
+            <div class="card-content">
+              <div class="card-text">
+                <h3 class="card-title">DeskSlope</h3>
+                <p class="card-desc">Snowboard using your webcam</p>
+              </div>
+              <a href="https://www.rachelhow.com/deskslope" target="_blank" rel="noopener" class="card-action-btn" aria-label="Open DeskSlope">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2: Nostalgic Snack Museum -->
+          <article class="bento-card snack-card">
+            <div class="card-image-wrap">
+              <img src="assets/images/snack_museum.jpg" alt="Nostalgic Snack Museum" loading="lazy">
+            </div>
+            <div class="card-content">
+              <div class="card-text">
+                <h3 class="card-title">Nostalgic Snack Museum</h3>
+                <p class="card-desc">Documenting my favourite Malaysian childhood snacks!</p>
+              </div>
+              <a href="https://nostalgicsnacks.com" target="_blank" rel="noopener" class="card-action-btn" aria-label="Open Nostalgic Snack Museum">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3: Hosting Demo Nights -->
+          <article class="bento-card campfire-card">
+            <div class="card-image-wrap">
+              <img src="assets/images/sidequest_campfire.jpg" alt="Hosting Demo Nights" loading="lazy">
+            </div>
+            <div class="card-content">
+              <div class="card-text">
+                <h3 class="card-title">Hosting demo nights</h3>
+                <p class="card-desc">Cozy offline gatherings for builders & indie hackers ⛺️</p>
+              </div>
+              <a href="https://sidequest.camp" target="_blank" rel="noopener" class="card-action-btn" aria-label="Open Side Quest">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 4: Cat Rain / Pink Snack Studio -->
+          <article class="bento-card catrain-card">
+            <div class="card-image-wrap">
+              <img src="assets/images/home-cat-rain.png" alt="Cat rain and snack experiments" loading="lazy">
+            </div>
+            <div class="card-content">
+              <div class="card-text">
+                <h3 class="card-title">Cat rain</h3>
+                <p class="card-desc">A useless game on mac.</p>
+              </div>
+              <a href="https://www.instagram.com/p/DZQ98FfToIu/" target="_blank" rel="noopener" class="card-action-btn" aria-label="Open Cat Rain">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Right Column -->
+        <div class="bento-col bento-right">
+          
+          <!-- Card 1: Sticker dumplings -->
+          <article class="bento-card dumpling-card">
+            <div class="card-image-wrap">
+              <img src="assets/images/sticker_dumpling.jpg" alt="Sticker dumplings" loading="lazy">
+            </div>
+            <div class="card-content">
+              <div class="card-text">
+                <h3 class="card-title">Sticker dumplings</h3>
+                <p class="card-desc">Stickers packed into hand-sewn cloth shaped like a dumpling 🥟</p>
+              </div>
+              <a href="https://www.instagram.com/reel/DJictQdyBsG/" target="_blank" rel="noopener" class="card-action-btn" aria-label="Open Sticker dumplings">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2: Studio Desk Setup -->
+          <article class="bento-card desk-photo-card">
+            <div class="card-image-wrap">
+              <img src="assets/images/desk_setup.jpg" alt="Studio Desk Setup" loading="lazy">
+            </div>
+            <div class="card-content">
+              <div class="card-text">
+                <h3 class="card-title">Studio Desk Setup</h3>
+                <p class="card-desc">My workspace for design, filming & YouTube videos</p>
+              </div>
+              <a href="#resources" class="card-action-btn nav-link" data-page="resources" aria-label="View Desk Setup details">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3: Fisheye Mirror Selfie -->
+          <article class="bento-card gallery-card" aria-label="Studio photo gallery">
+            <div class="home-gallery">
+              <div class="home-gallery-track">
+                <img src="assets/images/home-gallery-2.png" alt="Convex mirror selfie at my desk" class="home-gallery-slide active">
+                <img src="assets/images/home-gallery-1.png" alt="Desk corner with an orange tote and podcast mic" class="home-gallery-slide">
+                <img src="assets/images/home-gallery-3.png" alt="Coffee outside the Monocle café" class="home-gallery-slide">
+                <img src="assets/images/home-gallery-4.png" alt="Desk by the window with a paper lantern and fresh flowers" class="home-gallery-slide">
+                <img src="assets/images/home-gallery-5.png" alt="Lemon poster and mushroom lamp above my desk shelf" class="home-gallery-slide">
+              </div>
+              <div class="home-gallery-dots" role="tablist" aria-label="Studio photo gallery">
+                <button class="home-gallery-dot active" type="button" aria-label="Show photo 1 of 5" aria-current="true"></button>
+                <button class="home-gallery-dot" type="button" aria-label="Show photo 2 of 5"></button>
+                <button class="home-gallery-dot" type="button" aria-label="Show photo 3 of 5"></button>
+                <button class="home-gallery-dot" type="button" aria-label="Show photo 4 of 5"></button>
+                <button class="home-gallery-dot" type="button" aria-label="Show photo 5 of 5"></button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 2: RESOURCES -->
+    <section id="page-resources" class="page-section">
+      <div class="page-header">
+        <h1 class="page-title">Resources Archive 📦</h1>
+        <p class="page-subhead">Free templates, icons, wallpaper packs, and learning roadmaps.</p>
+      </div>
+
+      <!-- Resource Grid Cards -->
+      <div class="resources-grid">
+        <div class="resource-card">
+          <div class="resource-icon-badge">✨</div>
+          <h3>Minimal Icons Pack</h3>
+          <p>Clean 24px vector icons designed for modern UI interfaces & Figma.</p>
+          <a href="#" class="resource-link">Download Free →</a>
+        </div>
+        <div class="resource-card">
+          <div class="resource-icon-badge">🌅</div>
+          <h3>Glow Wallpaper Pack</h3>
+          <p>Ultra HD gradient wallpapers for Mac, iPhone, and desktop setups.</p>
+          <a href="#" class="resource-link">Get Wallpapers →</a>
+        </div>
+        <div class="resource-card">
+          <div class="resource-icon-badge">🗺️</div>
+          <h3>UI/UX Learning Roadmap</h3>
+          <p>A step-by-step guide for self-taught product designers in 2026.</p>
+          <a href="#" class="resource-link">Read Guide →</a>
+        </div>
+        <div class="resource-card">
+          <div class="resource-icon-badge">💼</div>
+          <h3>Creative Freelancer Kit</h3>
+          <p>Notion templates for client proposals, design contracts & invoicing.</p>
+          <a href="#" class="resource-link">Get Template →</a>
+        </div>
+      </div>
+
+      <!-- Favourite Tools Bar -->
+      <div class="section-block">
+        <h2 class="block-title">Favourite Tools</h2>
+        <div class="tools-pill-bar">
+          <div class="tool-pill"><span class="tool-icon">🌐</span> Arc Browser</div>
+          <div class="tool-pill"><span class="tool-icon">🎨</span> Figma</div>
+          <div class="tool-pill"><span class="tool-icon">📝</span> Notion</div>
+          <div class="tool-pill"><span class="tool-icon">📅</span> Cron Calendar</div>
+          <div class="tool-pill"><span class="tool-icon">🎬</span> DaVinci Resolve</div>
+          <div class="tool-pill"><span class="tool-icon">☑️</span> Things 3</div>
+          <div class="tool-pill"><span class="tool-icon">⚡</span> Craft</div>
+        </div>
+      </div>
+
+      <!-- Perks & Deals -->
+      <div class="section-block">
+        <h2 class="block-title">Perks & Discounts</h2>
+        <div class="perks-list">
+          <div class="perk-row">
+            <div class="perk-logo">M</div>
+            <div class="perk-info">
+              <h4>Mobbin UI Library</h4>
+              <p>Get 20% off annual subscription for world's largest UI design benchmark library.</p>
+            </div>
+            <a href="https://mobbin.com" target="_blank" class="perk-btn">Claim Deal ↗</a>
+          </div>
+          <div class="perk-row">
+            <div class="perk-logo">F</div>
+            <div class="perk-info">
+              <h4>Framer Pro</h4>
+              <p>3 months free Framer Pro workspace for building interactive websites.</p>
+            </div>
+            <a href="https://framer.com" target="_blank" class="perk-btn">Claim Deal ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desk Setup Breakdown -->
+      <div class="section-block">
+        <h2 class="block-title">Desk setup 🪴</h2>
+        <div class="desk-setup-banner">
+          <img src="assets/images/desk_setup.jpg" alt="Rachel How Desk Setup" loading="lazy">
+        </div>
+        <div class="hardware-list">
+          <div class="hardware-item">
+            <span class="hw-name">Apple Studio Display 27" 5K</span>
+            <span class="hw-desc">Nano-texture glass with tilt-adjustable stand</span>
+          </div>
+          <div class="hardware-item">
+            <span class="hw-name">Solid Maple Desk Shelf</span>
+            <span class="hw-desc">Custom crafted wood monitor riser by Balolo</span>
+          </div>
+          <div class="hardware-item">
+            <span class="hw-name">Keychron Q1 Pro Mechanical Keyboard</span>
+            <span class="hw-desc">Gateron Oil King switches & custom PBT keycaps</span>
+          </div>
+          <div class="hardware-item">
+            <span class="hw-name">Logitech MX Master 3S</span>
+            <span class="hw-desc">Pale Grey edition with quiet click switches</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 3: TOOLS -->
+    <section id="page-tools" class="page-section">
+      <div class="page-header">
+        <h1 class="page-title">Tools I keep coming back to ⚡️</h1>
+        <p class="page-subhead">A short list of tools and websites I keep coming back to.</p>
+      </div>
+
+      <div class="tools-grid">
+        <div class="tool-card-box">
+          <span class="tool-category">DESIGN REFERENCE</span>
+          <h3>Mobbin</h3>
+          <p>20% off your first year of Pro.</p>
+        </div>
+        <div class="tool-card-box">
+          <span class="tool-category">GRADIENT TOOL</span>
+          <h3>ShaderGradient</h3>
+          <p>Beautiful animated gradients for your projects.</p>
+        </div>
+        <div class="tool-card-box">
+          <span class="tool-category">DESIGN DISCOVERY</span>
+          <h3 style="margin-top:4px;">recent.design</h3>
+          <p>A curated feed of recent design work.</p>
+        </div>
+        <div class="tool-card-box">
+          <span class="tool-category">INSPIRATION</span>
+          <h3>Cosmos</h3>
+          <p>Save and organize inspiration from anywhere.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 4: CURSORS -->
+    <section id="page-cursors" class="page-section">
+      <div class="page-header">
+        <h1 class="page-title">Custom Cursors ↖</h1>
+        <p class="page-subhead">Fun custom cursor designs. Hover over any box below to test them!</p>
+      </div>
+
+      <div class="cursors-grid">
+        <div class="cursor-box cursor-star">
+          <div class="cursor-icon">⭐</div>
+          <h3>Berd</h3>
+          <p>A custom cursor spotted on berd.xyz.</p>
+        </div>
+        <div class="cursor-box cursor-retro">
+          <div class="cursor-icon">👾</div>
+          <h3>denisgurcu.com</h3>
+          <p>A custom cursor spotted on denisgurcu.com.</p>
+        </div>
+        <div class="cursor-box cursor-bubble">
+          <div class="cursor-icon">🫧</div>
+          <h3>interfaces.new</h3>
+          <p>A custom cursor spotted on interfaces.new.</p>
+        </div>
+        <div class="cursor-box cursor-crosshair">
+          <div class="cursor-icon">🎯</div>
+          <h3>tinycamp.site</h3>
+          <p>A custom cursor spotted on tinycamp.site.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 5: ABOUT -->
+    <section id="page-about" class="page-section">
+      <div class="about-container">
+        <div class="about-hero">
+          <div class="about-portrait-wrap">
+            <img src="assets/images/rachel_portrait.jpg" alt="Rachel How Portrait" class="about-portrait">
+          </div>
+          <div class="about-intro">
+            <h1 class="about-name">Hi! I'm Rachel How.</h1>
+            <p class="about-tagline">Designer, YouTuber & Video Lead at Mobbin based in Kuala Lumpur 🇲🇾</p>
+          </div>
+        </div>
+
+        <div class="about-body">
+          <div class="about-block">
+            <h2>Making videos on YouTube 🎥</h2>
+            <p>I talk about product design, building apps and websites. 270K subs.</p>
+          </div>
+
+          <div class="about-block">
+            <h2>Video Lead at Mobbin 🎨</h2>
+            <p>Grew their YouTube from 200 to 10,000+ in 2 months.</p>
+          </div>
+
+          <div class="about-block">
+            <h2>Side Quests & Demo Nights ⛺️</h2>
+            <p>Around the globe, primarily in Southeast Asia.</p>
+          </div>
+
+          <div class="signature-block">
+            <p class="sign-text">With love,</p>
+            <div class="signature-svg">
+              <span class="handwritten-sign">- Rachel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 6: WORK / CASE STUDIES -->
+    <section id="page-work" class="page-section">
+      <div class="page-header">
+        <h1 class="page-title">Case Studies 💼</h1>
+        <p class="page-subhead">Selected digital product design work and design systems.</p>
+      </div>
+
+      <div class="work-grid">
+        <article class="work-card">
+          <div class="work-img-wrap">
+            <img src="assets/images/fave_case_study.jpg" alt="Fave Fintech App Redesign" loading="lazy">
+          </div>
+          <div class="work-details">
+            <div class="work-tags"><span class="tag">Fave App</span></div>
+            <h2 class="work-title">Redesigning consumer fintech app experience for 4M users.</h2>
+            <p class="work-desc">Read the case study →</p>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <div class="work-img-wrap">
+            <img src="assets/images/desk_setup.jpg" alt="Daikin B2B Service Management System" loading="lazy">
+          </div>
+          <div class="work-details">
+            <div class="work-tags"><span class="tag">Daikin</span></div>
+            <h2 class="work-title">All-in-one system for managing Daikin's service providers.</h2>
+            <p class="work-desc">Sneak peek →</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PAGE 7: FIELD NOTES / BLOG -->
+    <section id="page-blog" class="page-section">
+      <div class="page-header">
+        <h1 class="page-title">Stuff I think about ✍️</h1>
+        <p class="page-subhead">Sharing what I learned as a designer navigating the AI era.</p>
+      </div>
+
+      <!-- Newsletter Signup -->
+      <div class="newsletter-card">
+        <h3>Join 12,000+ readers</h3>
+        <p>Get my bi-weekly thoughts on design, AI tools, and creative side projects directly in your inbox.</p>
+        <form class="newsletter-form" id="newsletterForm" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Field Notes! 🎉');">
+          <input type="email" placeholder="Enter your email..." required class="newsletter-input">
+          <button type="submit" class="newsletter-btn">Subscribe</button>
+        </form>
+      </div>
+
+      <!-- Article List -->
+      <div class="articles-list">
+        <article class="article-item" data-preview="assets/images/rachel_portrait.jpg">
+          <div class="article-main">
+            <h3 class="article-title">How AI is changing the workflow of product designers in 2026</h3>
+            <span class="article-tag">AI & Design</span>
+          </div>
+          <span class="article-date">Mar 21, 2025</span>
+        </article>
+
+        <article class="article-item" data-preview="assets/images/deskslope_3d.jpg">
+          <div class="article-main">
+            <h3 class="article-title">Building small, useless side projects for fun</h3>
+            <span class="article-tag">Experiments</span>
+          </div>
+          <span class="article-date">Feb 14, 2025</span>
+        </article>
+
+        <article class="article-item" data-preview="assets/images/desk_setup.jpg">
+          <div class="article-main">
+            <h3 class="article-title">My minimalist studio desk setup & video creator gear</h3>
+            <span class="article-tag">Workspace</span>
+          </div>
+          <span class="article-date">Jan 02, 2025</span>
+        </article>
+
+        <article class="article-item" data-preview="assets/images/fave_case_study.jpg">
+          <div class="article-main">
+            <h3 class="article-title">Lessons learned growing a design YouTube channel to 100k</h3>
+            <span class="article-tag">Career</span>
+          </div>
+          <span class="article-date">Nov 18, 2024</span>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Article Hover Image Preview Popup -->
+  <div class="article-hover-preview" id="hoverPreview" aria-hidden="true">
+    <img src="" alt="Preview" id="hoverPreviewImg">
+  </div>
+
+  <script src="Web%20Pages/app.js"></script>
+</body>
+</html>
