@@ -9,18 +9,14 @@
     <link rel="preload" href="../assets/fonts/PPWoodland-Light.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="../assets/fonts/PPWoodland-Regular.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="../assets/fonts/PPMori-Regular.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=4" />
     <script type="module" src="./script.js"></script>
   </head>
   <body>
     <aside class="sidebar" aria-label="Main navigation">
       <div class="sidebar-head">
-        <a class="brand" href="../Home%20Screen/index.html" aria-label="Rachel How home">
-          <img src="../assets/home-screen/images/brand-mark.png" alt="Rachel How" />
-        </a>
-        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-navigation">
-          <span></span><span></span><span></span>
-        </button>
+        <a class="brand" href="../Home%20Screen/index.html" aria-label="Rachel How home"><img src="../assets/home-screen/images/brand-mark.png" alt="Rachel How" /></a>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-navigation"><span></span><span></span><span></span></button>
       </div>
       <nav class="navigation" aria-label="Primary">
         <a class="nav-link" href="../Home%20Screen/index.html">Home</a>
@@ -53,69 +49,203 @@
     </aside>
 
     <main class="page-content tools-page">
-      <div class="tools-inner">
+      <section class="tools-section" aria-labelledby="tools-title">
         <header class="tools-header">
-          <h1 class="tools-title">Tools I keep coming back to.</h1>
+          <h1 id="tools-title" class="tools-title"><span class="tools-title-primary">Tools</span> <span class="tools-title-muted">I keep coming back to.</span></h1>
         </header>
 
-        <div class="res-grid">
-          <a class="res-card" href="https://mobbin.com/rachelhow?ref=rachelhow.com" target="_blank" rel="noreferrer">
-            <span class="res-card-title">Mobbin</span>
-            <span class="res-card-tag">20% off your first year of Pro</span>
-          </a>
+        <div class="home-projects-grid">
+          <article class="case-study-card home-project-card space-below">
+            <div class="home-project-media">
+              <video class="case-study-thumbnail home-project-thumb" autoplay loop muted playsinline aria-label="Mobbin">
+                <source src="./assets/images/mobbin.mp4" type="video/mp4" />
+              </video>
+              <div class="home-project-blur" aria-hidden="true"></div>
+              <div class="home-project-dim" aria-hidden="true"></div>
+              <div class="home-project-copy">
+                <h3 class="home-project-title">Mobbin</h3>
+                <p class="home-project-desc">20% off your first year of Pro</p>
+              </div>
+              <a class="home-project-arrow" href="https://mobbin.com/rachelhow?ref=rachelhow.com" target="_blank" rel="noreferrer" aria-label="Open Mobbin">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H10M17 7V14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                <span class="home-project-arrow-label">Open Mobbin</span>
+              </a>
+            </div>
+          </article>
 
-          <a class="res-card" href="https://shadergradient.co/?ref=rachelhow.com" target="_blank" rel="noreferrer">
-            <span class="res-card-title">ShaderGradient</span>
-          </a>
+          <article class="case-study-card home-project-card space-below">
+            <div class="home-project-media">
+              <video class="case-study-thumbnail home-project-thumb" autoplay loop muted playsinline aria-label="ShaderGradient">
+                <source src="./assets/images/shadergradient.mp4" type="video/mp4" />
+              </video>
+              <div class="home-project-blur" aria-hidden="true"></div>
+              <div class="home-project-dim" aria-hidden="true"></div>
+              <div class="home-project-copy">
+                <h3 class="home-project-title">ShaderGradient</h3>
+              </div>
+              <a class="home-project-arrow" href="https://shadergradient.co/?ref=rachelhow.com" target="_blank" rel="noreferrer" aria-label="Open ShaderGradient">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H10M17 7V14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                <span class="home-project-arrow-label">Open ShaderGradient</span>
+              </a>
+            </div>
+          </article>
 
-          <a class="res-card" href="https://recent.design/?ref=rachelhow.com" target="_blank" rel="noreferrer">
-            <span class="res-card-title">recent.design</span>
-          </a>
+          <article class="case-study-card home-project-card space-below">
+            <div class="home-project-media">
+              <video class="case-study-thumbnail home-project-thumb" autoplay loop muted playsinline aria-label="recent.design">
+                <source src="./assets/images/recent.mp4" type="video/mp4" />
+              </video>
+              <div class="home-project-blur" aria-hidden="true"></div>
+              <div class="home-project-dim" aria-hidden="true"></div>
+              <div class="home-project-copy">
+                <h3 class="home-project-title">recent.design</h3>
+              </div>
+              <a class="home-project-arrow" href="https://recent.design/?ref=rachelhow.com" target="_blank" rel="noreferrer" aria-label="Open recent.design">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H10M17 7V14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                <span class="home-project-arrow-label">Open recent.design</span>
+              </a>
+            </div>
+          </article>
 
-          <a class="res-card" href="https://www.cosmos.so/?ref=rachelhow.com" target="_blank" rel="noreferrer">
-            <span class="res-card-title">Cosmos</span>
-            <img class="res-card-img" src="./assets/images/cosmos.jpg" alt="Cosmos preview" />
-          </a>
+          <article class="case-study-card home-project-card space-below">
+            <div class="home-project-media">
+              <img class="case-study-thumbnail home-project-thumb" src="./assets/images/cosmos.jpg" alt="Cosmos" />
+              <img class="home-project-blur" src="./assets/images/cosmos.jpg" alt="" aria-hidden="true" />
+              <div class="home-project-dim" aria-hidden="true"></div>
+              <div class="home-project-copy">
+                <h3 class="home-project-title">Cosmos</h3>
+              </div>
+              <a class="home-project-arrow" href="https://www.cosmos.so/?ref=rachelhow.com" target="_blank" rel="noreferrer" aria-label="Open Cosmos">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H10M17 7V14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                <span class="home-project-arrow-label">Open Cosmos</span>
+              </a>
+            </div>
+          </article>
 
-          <a class="res-card" href="https://macfolio.com/?ref=rachelhow.com" target="_blank" rel="noreferrer">
-            <span class="res-card-title">Macfolio</span>
-            <img class="res-card-img" src="./assets/images/macfolio.png" alt="Macfolio preview" />
-          </a>
+          <article class="case-study-card home-project-card space-below">
+            <div class="home-project-media">
+              <img class="case-study-thumbnail home-project-thumb" src="./assets/images/macfolio.png" alt="Macfolio" />
+              <img class="home-project-blur" src="./assets/images/macfolio.png" alt="" aria-hidden="true" />
+              <div class="home-project-dim" aria-hidden="true"></div>
+              <div class="home-project-copy">
+                <h3 class="home-project-title">Macfolio</h3>
+              </div>
+              <a class="home-project-arrow" href="https://macfolio.com/?ref=rachelhow.com" target="_blank" rel="noreferrer" aria-label="Open Macfolio">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H10M17 7V14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                <span class="home-project-arrow-label">Open Macfolio</span>
+              </a>
+            </div>
+          </article>
 
-          <a class="res-card" href="https://fontsinuse.com/?ref=rachelhow.com" target="_blank" rel="noreferrer">
-            <span class="res-card-title">Fonts In Use</span>
-            <img class="res-card-img" src="./assets/images/fontsinuse.jpg" alt="Fonts In Use preview" />
-          </a>
+          <article class="case-study-card home-project-card space-below">
+            <div class="home-project-media">
+              <img class="case-study-thumbnail home-project-thumb" src="./assets/images/fontsinuse.jpg" alt="Fonts In Use" />
+              <img class="home-project-blur" src="./assets/images/fontsinuse.jpg" alt="" aria-hidden="true" />
+              <div class="home-project-dim" aria-hidden="true"></div>
+              <div class="home-project-copy">
+                <h3 class="home-project-title">Fonts In Use</h3>
+              </div>
+              <a class="home-project-arrow" href="https://fontsinuse.com/?ref=rachelhow.com" target="_blank" rel="noreferrer" aria-label="Open Fonts In Use">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H10M17 7V14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                <span class="home-project-arrow-label">Open Fonts In Use</span>
+              </a>
+            </div>
+          </article>
 
-          <a class="res-card" href="https://designspells.com/?ref=rachelhow.com" target="_blank" rel="noreferrer">
-            <span class="res-card-title">Design Spells</span>
-            <img class="res-card-img" src="./assets/images/designspells.jpg" alt="Design Spells preview" />
-          </a>
+          <article class="case-study-card home-project-card space-below">
+            <div class="home-project-media">
+              <img class="case-study-thumbnail home-project-thumb" src="./assets/images/designspells.jpg" alt="Design Spells" />
+              <img class="home-project-blur" src="./assets/images/designspells.jpg" alt="" aria-hidden="true" />
+              <div class="home-project-dim" aria-hidden="true"></div>
+              <div class="home-project-copy">
+                <h3 class="home-project-title">Design Spells</h3>
+              </div>
+              <a class="home-project-arrow" href="https://designspells.com/?ref=rachelhow.com" target="_blank" rel="noreferrer" aria-label="Open Design Spells">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H10M17 7V14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                <span class="home-project-arrow-label">Open Design Spells</span>
+              </a>
+            </div>
+          </article>
 
-          <a class="res-card" href="https://icon.museum/?ref=rachelhow.com" target="_blank" rel="noreferrer">
-            <span class="res-card-title">Icon Museum</span>
-          </a>
+          <article class="case-study-card home-project-card space-below">
+            <div class="home-project-media">
+              <video class="case-study-thumbnail home-project-thumb" autoplay loop muted playsinline aria-label="Icon Museum">
+                <source src="./assets/images/icon-museum.mp4" type="video/mp4" />
+              </video>
+              <div class="home-project-blur" aria-hidden="true"></div>
+              <div class="home-project-dim" aria-hidden="true"></div>
+              <div class="home-project-copy">
+                <h3 class="home-project-title">Icon Museum</h3>
+              </div>
+              <a class="home-project-arrow" href="https://icon.museum/?ref=rachelhow.com" target="_blank" rel="noreferrer" aria-label="Open Icon Museum">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H10M17 7V14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                <span class="home-project-arrow-label">Open Icon Museum</span>
+              </a>
+            </div>
+          </article>
 
-          <a class="res-card" href="https://annualreport.gallery/?ref=rachelhow.com" target="_blank" rel="noreferrer">
-            <span class="res-card-title">Annual Report Archive</span>
-            <img class="res-card-img" src="./assets/images/annualreport.jpg" alt="Annual Report Archive preview" />
-          </a>
+          <article class="case-study-card home-project-card space-below">
+            <div class="home-project-media">
+              <img class="case-study-thumbnail home-project-thumb" src="./assets/images/annualreport.jpg" alt="Annual Report Archive" />
+              <img class="home-project-blur" src="./assets/images/annualreport.jpg" alt="" aria-hidden="true" />
+              <div class="home-project-dim" aria-hidden="true"></div>
+              <div class="home-project-copy">
+                <h3 class="home-project-title">Annual Report Archive</h3>
+              </div>
+              <a class="home-project-arrow" href="https://annualreport.gallery/?ref=rachelhow.com" target="_blank" rel="noreferrer" aria-label="Open Annual Report Archive">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H10M17 7V14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                <span class="home-project-arrow-label">Open Annual Report Archive</span>
+              </a>
+            </div>
+          </article>
 
-          <a class="res-card" href="https://studyoldads.com/?ref=rachelhow.com" target="_blank" rel="noreferrer">
-            <span class="res-card-title">Study Old Ads</span>
-            <img class="res-card-img" src="./assets/images/studyoldads.png" alt="Study Old Ads preview" />
-          </a>
+          <article class="case-study-card home-project-card space-below">
+            <div class="home-project-media">
+              <img class="case-study-thumbnail home-project-thumb" src="./assets/images/studyoldads.png" alt="Study Old Ads" />
+              <img class="home-project-blur" src="./assets/images/studyoldads.png" alt="" aria-hidden="true" />
+              <div class="home-project-dim" aria-hidden="true"></div>
+              <div class="home-project-copy">
+                <h3 class="home-project-title">Study Old Ads</h3>
+              </div>
+              <a class="home-project-arrow" href="https://studyoldads.com/?ref=rachelhow.com" target="_blank" rel="noreferrer" aria-label="Open Study Old Ads">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H10M17 7V14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                <span class="home-project-arrow-label">Open Study Old Ads</span>
+              </a>
+            </div>
+          </article>
 
-          <a class="res-card" href="https://deck.gallery/?ref=rachelhow.com" target="_blank" rel="noreferrer">
-            <span class="res-card-title">Slide Decks Inspo</span>
-            <img class="res-card-img" src="./assets/images/deck-gallery.webp" alt="Slide Decks Inspo preview" />
-          </a>
+          <article class="case-study-card home-project-card space-below">
+            <div class="home-project-media">
+              <img class="case-study-thumbnail home-project-thumb" src="./assets/images/deck-gallery.webp" alt="Slide Decks Inspo" />
+              <img class="home-project-blur" src="./assets/images/deck-gallery.webp" alt="" aria-hidden="true" />
+              <div class="home-project-dim" aria-hidden="true"></div>
+              <div class="home-project-copy">
+                <h3 class="home-project-title">Slide Decks Inspo</h3>
+              </div>
+              <a class="home-project-arrow" href="https://deck.gallery/?ref=rachelhow.com" target="_blank" rel="noreferrer" aria-label="Open Slide Decks Inspo">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H10M17 7V14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                <span class="home-project-arrow-label">Open Slide Decks Inspo</span>
+              </a>
+            </div>
+          </article>
 
-          <a class="res-card" href="https://www.fuse.kiwi/?ref=rachelhow.com" target="_blank" rel="noreferrer">
-            <span class="res-card-title">fuse.kiwi</span>
-          </a>
+          <article class="case-study-card home-project-card space-below">
+            <div class="home-project-media">
+              <video class="case-study-thumbnail home-project-thumb" autoplay loop muted playsinline aria-label="fuse.kiwi">
+                <source src="./assets/images/fuse.mp4" type="video/mp4" />
+              </video>
+              <div class="home-project-dim" aria-hidden="true"></div>
+              <div class="home-project-copy">
+                <h3 class="home-project-title">fuse.kiwi</h3>
+              </div>
+              <a class="home-project-arrow" href="https://www.fuse.kiwi/?ref=rachelhow.com" target="_blank" rel="noreferrer" aria-label="Open fuse.kiwi">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H10M17 7V14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                <span class="home-project-arrow-label">Open fuse.kiwi</span>
+              </a>
+            </div>
+          </article>
         </div>
-      </div>
+      </section>
     </main>
   </body>
 </html>
