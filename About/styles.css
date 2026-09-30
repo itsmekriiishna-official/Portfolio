@@ -65,8 +65,8 @@
 .about-link {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	gap: 8px;
+	justify-content: flex-start;
+	gap: 1px;
 	margin-top: 8px;
 	color: #222227;
 	font-family: "PP Mori", sans-serif;
@@ -74,27 +74,25 @@
 	font-weight: 600;
 	line-height: 24px;
 	text-decoration: none;
-	transition: color 150ms ease;
+	transition: none;
 }
 
-.about-link span {
-	color: rgba(34, 34, 39, 0.5);
-	font-size: 18px;
-	font-weight: 400;
-	transition: color 150ms ease, transform 150ms ease;
+.about-link img {
+	display: block;
+	width: 20px;
+	height: 20px;
+	flex: none;
+	object-fit: contain;
 }
 
-.about-link:hover,
-.about-link:focus-visible,
 .about-find a:hover,
 .about-find a:focus-visible {
 	color: #777;
 }
 
-.about-link:hover span,
-.about-link:focus-visible span {
-	color: #222227;
-	transform: translate(2px, -2px);
+.about-link:focus-visible {
+	outline: 2px solid #222227;
+	outline-offset: 3px;
 }
 
 .about-now-row p,
@@ -239,7 +237,6 @@
 
 @media (prefers-reduced-motion: reduce) {
 	.about-link,
-	.about-link span,
 	.about-story > p a,
 	.about-find > p a {
 		transition: none;
