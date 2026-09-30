@@ -1,0 +1,210 @@
+@import url("../Home Screen/style.css");
+
+/* ─── Page Layout ─────────────────────────────────────────────────────────── */
+.page-content.blog-page {
+  position: relative;
+  z-index: 1;
+  width: calc(100% - 200px);
+  min-height: 100vh;
+  margin-left: 200px;
+  padding: 40px 60px 120px;
+}
+
+.blog-container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.container-blog-list {
+  width: 100%;
+}
+
+/* ─── Hero Section ─────────────────────────────────────────────────────────── */
+.blog-hero {
+  padding-top: 20px;
+  padding-bottom: 48px;
+}
+
+.section-heading-center {
+  max-width: 620px;
+}
+
+.section-heading {
+  font-family: "PP Woodland", serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #111;
+  margin: 0 0 12px;
+  letter-spacing: -0.02em;
+}
+
+.section-heading-center .light {
+  font-family: "PP Mori", sans-serif;
+  color: #737373;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin: 0 0 16px;
+}
+
+.section-heading-center .text-link {
+  font-family: "PP Mori", sans-serif;
+  color: #111;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
+}
+
+.section-heading-center .text-link:hover {
+  opacity: 0.7;
+}
+
+/* ─── Blog Index Grid Layout ──────────────────────────────────────────────── */
+.blog-index {
+  display: grid;
+  width: 100%;
+  gap: 40px;
+}
+
+@media (min-width: 992px) {
+  .blog-index {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 42%);
+    align-items: start;
+    gap: 48px;
+  }
+}
+
+.blog-index-list {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.blog-index-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  padding: 16px 0;
+  border-bottom: 0.5px solid rgba(34, 34, 39, 0.12);
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.blog-index-list > div:last-child .blog-index-row {
+  border-bottom: none;
+}
+
+.blog-index-title {
+  font-family: "PP Mori", sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1c1c1f;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+.blog-index-date {
+  color: #8c8c8c;
+  font-family: "PP Mori", sans-serif;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: opacity 0.15s ease;
+}
+
+/* Dim non-hovered items */
+@media (hover: hover) {
+  .blog-index-list:hover .blog-index-row:not(:hover):not(:focus-visible) .blog-index-title,
+  .blog-index-list:hover .blog-index-row:not(:hover):not(:focus-visible) .blog-index-date {
+    opacity: 0.35;
+  }
+
+  .blog-index-row:hover .blog-index-title {
+    color: #000;
+  }
+}
+
+/* ─── Sticky Cover Image Frame ────────────────────────────────────────────── */
+.blog-index-cover {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .blog-index-cover {
+    display: block;
+    position: sticky;
+    top: 32px;
+  }
+}
+
+.blog-index-cover-frame {
+  aspect-ratio: 16 / 9;
+  background: #efece6;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.blog-index-cover img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.28s cubic-bezier(0.2, 0, 0, 1);
+  display: block;
+}
+
+.blog-index-cover img.is-active {
+  opacity: 1;
+}
+
+/* ─── Explore Topics Section ──────────────────────────────────────────────── */
+.explore-topics-section {
+  margin-top: 72px;
+  padding-top: 48px;
+  border-top: 0.5px solid rgba(34, 34, 39, 0.1);
+}
+
+.explore-topics-section .section-heading {
+  font-size: 1.75rem;
+  margin-bottom: 24px;
+}
+
+.blog-topics .blog-index-row {
+  padding: 16px 0;
+}
+
+/* ─── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .page-content.blog-page {
+    width: 100%;
+    margin-left: 0;
+    padding: 32px 24px 80px;
+  }
+
+  .blog-hero {
+    padding-top: 16px;
+    padding-bottom: 32px;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 479px) {
+  .blog-index-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}

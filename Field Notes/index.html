@@ -1,17 +1,253 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Field Notes | Rachel How</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" type="module"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fdfcf9" />
+  <title>Blog | Rachel How</title>
+  <meta name="description" content="Learn. Unlearn. Relearn. Sharing my learnings on design, self-development & solopreneurship." />
+  <link rel="preload" href="../assets/fonts/PPWoodland-Light.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../assets/fonts/PPWoodland-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../assets/fonts/PPMori-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="./styles.css" />
+  <script type="module" src="./script.js"></script>
 </head>
 <body>
-  <div class="grain-overlay" aria-hidden="true"></div>
-  <header class="mobile-header"><a href="../Home%20Screen/" class="mobile-logo">Rachel How</a><button class="mobile-menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation menu">&#9776;</button></header>
-  <aside class="sidebar" id="sidebar" aria-label="Main navigation"><div class="sidebar-top"><a href="../Home%20Screen/" class="logo-link" aria-label="Rachel How home"><svg class="rh-logo" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M6 8C6 6.895 6.895 6 8 6h7.5a5.5 5.5 0 0 1 0 11H6V8Z" stroke="#111" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 17h8.5L21 26M26 6v20" stroke="#111" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><nav class="nav-menu" aria-label="Sections"><div class="nav-group"><a href="../Home%20Screen/" class="nav-item">Home</a><a href="../Resources/" class="nav-item">Resources</a><a href="../Tools/" class="nav-item">Tools</a><a href="../Cursors/" class="nav-item">Cursors</a></div><div class="nav-group nav-group-secondary"><a href="../About/" class="nav-item">About</a><a href="../Work/" class="nav-item">Work</a><a href="../Field%20Notes/" class="nav-item active" aria-current="page">Field Notes</a></div></nav></div><div class="sidebar-bottom"><div class="live-clock-container"><span id="liveClock"></span><span class="clock-tz">MYT</span></div><div class="social-links"><a href="https://youtube.com/@rachelhow" class="social-icon" aria-label="YouTube">YT</a><a href="https://twitter.com/rachelworship" class="social-icon" aria-label="Twitter / X">X</a><a href="https://linkedin.com/in/rachelhow" class="social-icon" aria-label="LinkedIn">in</a><a href="mailto:rachel@rachelhow.com" class="social-icon" aria-label="Email">@</a></div></div></aside>
-  <main class="main-content"><section id="page-blog" class="page-section active"><div class="page-header"><h1 class="page-title">Stuff I think about</h1><p class="page-subhead">Sharing what I learned as a designer navigating the AI era.</p></div><div class="newsletter-card"><h2>Join 12,000+ readers</h2><p>Get my bi-weekly thoughts on design, AI tools, and creative side projects directly in your inbox.</p><form class="newsletter-form" id="newsletterForm"><label class="visually-hidden" for="newsletterEmail">Email address</label><input id="newsletterEmail" name="email" type="email" placeholder="Enter your email..." required class="newsletter-input"><button type="submit" class="newsletter-btn">Subscribe</button></form><p class="newsletter-status" id="newsletterStatus" role="status" aria-live="polite"></p></div><div class="articles-list"><article class="article-item" data-preview="../assets/images/rachel_portrait.jpg"><div class="article-main"><h2 class="article-title">How AI is changing the workflow of product designers in 2026</h2><span class="article-tag">AI &amp; Design</span></div><span class="article-date">Mar 21, 2025</span></article><article class="article-item" data-preview="../assets/images/deskslope_3d.jpg"><div class="article-main"><h2 class="article-title">Building small, useless side projects for fun</h2><span class="article-tag">Experiments</span></div><span class="article-date">Feb 14, 2025</span></article><article class="article-item" data-preview="../assets/images/desk_setup.jpg"><div class="article-main"><h2 class="article-title">My minimalist studio desk setup &amp; video creator gear</h2><span class="article-tag">Workspace</span></div><span class="article-date">Jan 02, 2025</span></article><article class="article-item" data-preview="../assets/images/fave_case_study.jpg"><div class="article-main"><h2 class="article-title">Lessons learned growing a design YouTube channel</h2><span class="article-tag">Career</span></div><span class="article-date">Nov 18, 2024</span></article></div></section></main>
-  <div class="article-hover-preview" id="hoverPreview" aria-hidden="true"><img src="" alt="" id="hoverPreviewImg"></div>
+  <!-- Sidebar -->
+  <aside class="sidebar" aria-label="Main navigation">
+    <div class="sidebar-head">
+      <a class="brand" href="../Home%20Screen/index.html" aria-label="Rachel How home">
+        <img src="../assets/home-screen/images/brand-mark.png" alt="Rachel How" />
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="navigation" aria-label="Primary">
+      <a class="nav-link" href="../Home%20Screen/index.html">Home</a>
+      <a class="nav-link" href="../Resources/index.html">Resources</a>
+      <a class="nav-link" href="../Tools/index.html">Tools</a>
+      <a class="nav-link" href="../Cursors/index.html">Cursors</a>
+      <a class="nav-link nav-spaced" href="../About/index.html">About</a>
+      <a class="nav-link" href="../Work/index.html">Work</a>
+      <a class="nav-link current" href="./index.html" aria-current="page">Field Notes</a>
+    </nav>
+    <div class="sidebar-bottom">
+      <time class="local-time" id="local-time"><span class="local-clock-value"></span><span class="local-clock-zone"></span></time>
+      <div class="social-links" aria-label="Social links">
+        <a href="https://youtube.com/c/rachelhow" aria-label="YouTube" target="_blank" rel="noreferrer"><img src="../assets/home-screen/icons/youtube.svg" alt="" /></a>
+        <a href="https://twitter.com/rachelhxw" aria-label="Twitter" target="_blank" rel="noreferrer"><img src="../assets/home-screen/icons/twitter.svg" alt="" /></a>
+        <a href="https://www.linkedin.com/in/rachelhow" aria-label="LinkedIn" target="_blank" rel="noreferrer"><img src="../assets/home-screen/icons/linkedin.svg" alt="" /></a>
+        <a href="https://instagram.com/rachelhxw" aria-label="Instagram" target="_blank" rel="noreferrer"><img src="../assets/home-screen/icons/instagram.svg" alt="" /></a>
+        <a href="mailto:rachel@rachelhow.com" aria-label="Email"><img src="../assets/home-screen/icons/email.svg" alt="" /></a>
+      </div>
+    </div>
+    <nav class="mobile-navigation" id="mobile-navigation" aria-label="Mobile primary" hidden>
+      <a href="../Home%20Screen/index.html">Home</a>
+      <a href="../Resources/index.html">Resources</a>
+      <a href="../Tools/index.html">Tools</a>
+      <a href="../Cursors/index.html">Cursors</a>
+      <a href="../About/index.html">About</a>
+      <a href="../Work/index.html">Work</a>
+      <a href="./index.html" aria-current="page">Field Notes</a>
+    </nav>
+  </aside>
+
+  <!-- Main content -->
+  <main class="page-content blog-page">
+    <div class="blog-container">
+
+      <!-- Hero Section -->
+      <section class="section blog-hero">
+        <div class="container-blog-list">
+          <div class="section-heading-center">
+            <h1 class="section-heading">Stuff I think about</h1>
+            <p class="light">Sharing what I learned as a designer navigating the AI era.</p>
+            <a href="https://rachelhow.substack.com/" target="_blank" rel="noopener noreferrer" class="text-link">Subscribe to the newsletter.</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blog Posts Section with Sticky Cover Preview -->
+      <section class="section my-36">
+        <div class="container-blog-list">
+          <div class="blog-index">
+
+            <!-- Left Column: Interactive Article List -->
+            <div class="blog-index-list" role="list">
+
+              <div role="listitem">
+                <a href="#" class="blog-index-row is-active" data-slug="clickup-playbook">
+                  <span class="blog-index-title">Steal this $20M playbook (7 growth strategies)</span>
+                  <span class="blog-index-date">Mar 21, 2025</span>
+                </a>
+              </div>
+
+              <div role="listitem">
+                <a href="#" class="blog-index-row" data-slug="how-not-to-design-modern-ui">
+                  <span class="blog-index-title">How Not to Design Modern UI</span>
+                  <span class="blog-index-date">Aug 15, 2024</span>
+                </a>
+              </div>
+
+              <div role="listitem">
+                <a href="#" class="blog-index-row" data-slug="pricing-freelance-services">
+                  <span class="blog-index-title">Guide to pricing your freelance services</span>
+                  <span class="blog-index-date">Feb 16, 2023</span>
+                </a>
+              </div>
+
+              <div role="listitem">
+                <a href="#" class="blog-index-row" data-slug="how-to-find-inspiration-for-app-web-design-fast">
+                  <span class="blog-index-title">How to find inspiration for app &amp; web design, fast</span>
+                  <span class="blog-index-date">Feb 1, 2023</span>
+                </a>
+              </div>
+
+              <div role="listitem">
+                <a href="#" class="blog-index-row" data-slug="9-income-streams-in-2022">
+                  <span class="blog-index-title">9 Income Streams in 2022: What I Learned</span>
+                  <span class="blog-index-date">Jan 22, 2023</span>
+                </a>
+              </div>
+
+              <div role="listitem">
+                <a href="#" class="blog-index-row" data-slug="why-i-quit-my-high-paying-job">
+                  <span class="blog-index-title">Why I quit my high-paying job</span>
+                  <span class="blog-index-date">Jan 12, 2023</span>
+                </a>
+              </div>
+
+              <div role="listitem">
+                <a href="#" class="blog-index-row" data-slug="how-i-doubled-my-income-in-a-year">
+                  <span class="blog-index-title">How I doubled my income in a year</span>
+                  <span class="blog-index-date">Dec 19, 2022</span>
+                </a>
+              </div>
+
+              <div role="listitem">
+                <a href="#" class="blog-index-row" data-slug="6-ways-to-boost-productivity-using-chatgpt">
+                  <span class="blog-index-title">6 Ways to Boost Productivity &amp; Get More Done Using AI (ChatGPT)</span>
+                  <span class="blog-index-date">Dec 8, 2022</span>
+                </a>
+              </div>
+
+              <div role="listitem">
+                <a href="#" class="blog-index-row" data-slug="i-had-creative-burnout">
+                  <span class="blog-index-title">I had creative burnout: 4 signs &amp; how to approach it</span>
+                  <span class="blog-index-date">Nov 28, 2022</span>
+                </a>
+              </div>
+
+              <div role="listitem">
+                <a href="#" class="blog-index-row" data-slug="how-i-manage-my-time">
+                  <span class="blog-index-title">How I manage my time with a full time job, freelance &amp; side hustles</span>
+                  <span class="blog-index-date">Aug 31, 2022</span>
+                </a>
+              </div>
+
+              <div role="listitem">
+                <a href="#" class="blog-index-row" data-slug="execute-on-your-highest-leverage-action">
+                  <span class="blog-index-title">Execute on your highest leverage action</span>
+                  <span class="blog-index-date">Feb 23, 2021</span>
+                </a>
+              </div>
+
+              <div role="listitem">
+                <a href="#" class="blog-index-row" data-slug="anti-procrastination">
+                  <span class="blog-index-title">Anti-Procrastination</span>
+                  <span class="blog-index-date">Feb 22, 2021</span>
+                </a>
+              </div>
+
+              <div role="listitem">
+                <a href="#" class="blog-index-row" data-slug="lifestyle-design-2021">
+                  <span class="blog-index-title">My Lifestyle Design for 2021</span>
+                  <span class="blog-index-date">Feb 14, 2021</span>
+                </a>
+              </div>
+
+              <div role="listitem">
+                <a href="#" class="blog-index-row" data-slug="how-i-built-malaysians-who-make">
+                  <span class="blog-index-title">How I built Malaysians Who Make</span>
+                  <span class="blog-index-date">Jun 24, 2020</span>
+                </a>
+              </div>
+
+              <div role="listitem">
+                <a href="#" class="blog-index-row" data-slug="my-journey-of-learning-failing">
+                  <span class="blog-index-title">My journey of learning, failing and standing back up</span>
+                  <span class="blog-index-date">Jun 16, 2020</span>
+                </a>
+              </div>
+
+              <div role="listitem">
+                <a href="#" class="blog-index-row" data-slug="native-lottie-animations">
+                  <span class="blog-index-title">Native Lottie animations with Sketch &amp; AE, the simple way.</span>
+                  <span class="blog-index-date">Sep 9, 2019</span>
+                </a>
+              </div>
+
+              <div role="listitem">
+                <a href="#" class="blog-index-row" data-slug="hackathon-learnings">
+                  <span class="blog-index-title">What I’ve learned from joining a hackathon with only 1.5 months of coding experience</span>
+                  <span class="blog-index-date">May 13, 2019</span>
+                </a>
+              </div>
+
+            </div>
+
+            <!-- Right Column: Sticky Floating Cover Preview -->
+            <div class="blog-index-cover" aria-hidden="true">
+              <div class="blog-index-cover-frame">
+                <img src="../assets/blog/clickup-playbook.png" alt="" class="is-active" data-slug="clickup-playbook" />
+                <img src="../assets/blog/how-not-to-design-modern-ui.png" alt="" data-slug="how-not-to-design-modern-ui" />
+                <img src="../assets/blog/pricing-freelance-services.png" alt="" data-slug="pricing-freelance-services" />
+                <img src="../assets/blog/how-to-find-inspiration-for-app-web-design-fast.png" alt="" data-slug="how-to-find-inspiration-for-app-web-design-fast" />
+                <img src="../assets/blog/9-income-streams-in-2022.png" alt="" data-slug="9-income-streams-in-2022" />
+                <img src="../assets/blog/why-i-quit-my-high-paying-job.png" alt="" data-slug="why-i-quit-my-high-paying-job" />
+                <img src="../assets/blog/how-i-doubled-my-income-in-a-year.png" alt="" data-slug="how-i-doubled-my-income-in-a-year" />
+                <img src="../assets/blog/6-ways-to-boost-productivity-using-chatgpt.png" alt="" data-slug="6-ways-to-boost-productivity-using-chatgpt" />
+                <img src="../assets/blog/i-had-creative-burnout.png" alt="" data-slug="i-had-creative-burnout" />
+                <img src="../assets/blog/how-i-manage-my-time.png" alt="" data-slug="how-i-manage-my-time" />
+                <img src="../assets/blog/execute-on-your-highest-leverage-action.png" alt="" data-slug="execute-on-your-highest-leverage-action" />
+                <img src="../assets/blog/anti-procrastination.png" alt="" data-slug="anti-procrastination" />
+                <img src="../assets/blog/lifestyle-design-2021.png" alt="" data-slug="lifestyle-design-2021" />
+                <img src="../assets/blog/how-i-built-malaysians-who-make.png" alt="" data-slug="how-i-built-malaysians-who-make" />
+                <img src="../assets/blog/my-journey-of-learning-failing.png" alt="" data-slug="my-journey-of-learning-failing" />
+                <img src="../assets/blog/native-lottie-animations.png" alt="" data-slug="native-lottie-animations" />
+                <img src="../assets/blog/hackathon-learnings.png" alt="" data-slug="hackathon-learnings" />
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Explore Topics Section -->
+      <section class="section explore-topics-section">
+        <div class="container-blog-list">
+          <h2 class="section-heading">Explore topics</h2>
+          <div class="blog-index blog-topics">
+            <div class="blog-index-list" role="list">
+              <div role="listitem">
+                <a href="#" class="blog-index-row">
+                  <span class="blog-index-title">UI/UX Design</span>
+                  <span class="blog-index-date">Nov 24, 2022</span>
+                </a>
+              </div>
+              <div role="listitem">
+                <a href="#" class="blog-index-row">
+                  <span class="blog-index-title">Solopreneurship</span>
+                  <span class="blog-index-date">Nov 24, 2022</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /blog-container -->
+  </main>
 </body>
 </html>

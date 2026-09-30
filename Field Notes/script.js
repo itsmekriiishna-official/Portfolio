@@ -1,10 +1,59 @@
-import "../Web%20Pages/app.js";
+// Mobile Navigation
+const menuToggle = document.querySelector('.menu-toggle');
+const mobileNavigation = document.querySelector('#mobile-navigation');
 
-const form = document.getElementById("newsletterForm");
-const status = document.getElementById("newsletterStatus");
+function setMenuOpen(open) {
+  if (!menuToggle || !mobileNavigation) return;
+  menuToggle.classList.toggle('is-open', open);
+  menuToggle.setAttribute('aria-expanded', String(open));
+  menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  mobileNavigation.hidden = !open;
+  document.body.classList.toggle('menu-open', open);
+}
 
-form?.addEventListener("submit", event => {
-  event.preventDefault();
-  status.textContent = "Thanks for subscribing to Field Notes.";
-  form.reset();
+menuToggle?.addEventListener('click', () => setMenuOpen(menuToggle.getAttribute('aria-expanded') !== 'true'));
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && menuToggle?.getAttribute('aria-expanded') === 'true') setMenuOpen(false);
+});
+mobileNavigation?.addEventListener('click', (event) => {
+  if (event.target.closest('a')) setMenuOpen(false);
+});
+
+// Local Clock
+const clockValue = document.querySelector('#local-time .local-clock-value');
+const clockZone = document.querySelector('#local-time .local-clock-zone');
+const localTimeFormatter = new Intl.DateTimeFormat(undefined, { hour: 'numeric', minute: '2-digit', second: '2-digit', hour12: true });
+const localZoneFormatter = new Intl.DateTimeFormat(undefined, { timeZoneName: 'shortOffset' });
+
+function updateClock() {
+  const now = new Date();
+  if (clockValue) clockValue.textContent = localTimeFormatter.format(now);
+  if (clockZone) clockZone.textContent = localZoneFormatter.formatToParts(now).find((part) => part.type === 'timeZoneName')?.value ?? '';
+}
+
+updateClock();
+window.setInterval(updateClock, 1000);
+
+// Interactive Hover Cover Image Preview
+const blogRows = document.querySelectorAll('.blog-index-list .blog-index-row');
+const coverImages = document.querySelectorAll('.blog-index-cover-frame img');
+
+blogRows.forEach((row) => {
+  row.addEventListener('mouseenter', () => {
+    const slug = row.getAttribute('data-slug');
+    if (!slug) return;
+
+    // Update active row
+    blogRows.forEach((r) => r.classList.remove('is-active'));
+    row.classList.add('is-active');
+
+    // Update active cover preview
+    coverImages.forEach((img) => {
+      if (img.getAttribute('data-slug') === slug) {
+        img.classList.add('is-active');
+      } else {
+        img.classList.remove('is-active');
+      }
+    });
+  });
 });
