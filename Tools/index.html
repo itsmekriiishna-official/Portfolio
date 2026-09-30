@@ -1,16 +1,121 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tools | Rachel How</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" type="module"></script>
-</head>
-<body>
-  <div class="grain-overlay" aria-hidden="true"></div>
-  <header class="mobile-header"><a href="../Home%20Screen/" class="mobile-logo">Rachel How</a><button class="mobile-menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation menu">&#9776;</button></header>
-  <aside class="sidebar" id="sidebar" aria-label="Main navigation"><div class="sidebar-top"><a href="../Home%20Screen/" class="logo-link" aria-label="Rachel How home"><svg class="rh-logo" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M6 8C6 6.895 6.895 6 8 6h7.5a5.5 5.5 0 0 1 0 11H6V8Z" stroke="#111" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 17h8.5L21 26M26 6v20" stroke="#111" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><nav class="nav-menu" aria-label="Sections"><div class="nav-group"><a href="../Home%20Screen/" class="nav-item">Home</a><a href="../Resources/" class="nav-item">Resources</a><a href="../Tools/" class="nav-item active" aria-current="page">Tools</a><a href="../Cursors/" class="nav-item">Cursors</a></div><div class="nav-group nav-group-secondary"><a href="../About/" class="nav-item">About</a><a href="../Work/" class="nav-item">Work</a><a href="../Field%20Notes/" class="nav-item">Field Notes</a></div></nav></div><div class="sidebar-bottom"><div class="live-clock-container"><span id="liveClock"></span><span class="clock-tz">MYT</span></div><div class="social-links"><a href="https://youtube.com/@rachelhow" class="social-icon" aria-label="YouTube">YT</a><a href="https://twitter.com/rachelworship" class="social-icon" aria-label="Twitter / X">X</a><a href="https://linkedin.com/in/rachelhow" class="social-icon" aria-label="LinkedIn">in</a><a href="mailto:rachel@rachelhow.com" class="social-icon" aria-label="Email">@</a></div></div></aside>
-  <main class="main-content"><section id="page-tools" class="page-section active"><div class="page-header"><h1 class="page-title">Tools I keep coming back to</h1><p class="page-subhead">A short list of tools and websites I use for design, discovery, and making.</p></div><div class="tools-grid"><article class="tool-card-box"><span class="tool-category">DESIGN REFERENCE</span><h3>Mobbin</h3><p>Product patterns and interface references for product designers.</p></article><article class="tool-card-box"><span class="tool-category">GRADIENT TOOL</span><h3>ShaderGradient</h3><p>Build beautiful animated gradients for digital projects.</p></article><article class="tool-card-box"><span class="tool-category">DESIGN DISCOVERY</span><h3>recent.design</h3><p>A curated feed of recent design work.</p></article><article class="tool-card-box"><span class="tool-category">INSPIRATION</span><h3>Cosmos</h3><p>Save and organize inspiration from anywhere.</p></article></div></section></main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fdfcf9" />
+    <title>Tools | Rachel How</title>
+    <meta name="description" content="Tools I keep coming back to, from Mobbin and ShaderGradient to Cosmos and Design Spells." />
+    <link rel="preload" href="../assets/fonts/PPWoodland-Light.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../assets/fonts/PPWoodland-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../assets/fonts/PPMori-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./script.js"></script>
+  </head>
+  <body>
+    <aside class="sidebar" aria-label="Main navigation">
+      <div class="sidebar-head">
+        <a class="brand" href="../Home%20Screen/index.html" aria-label="Rachel How home">
+          <img src="../assets/home-screen/images/brand-mark.png" alt="Rachel How" />
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="navigation" aria-label="Primary">
+        <a class="nav-link" href="../Home%20Screen/index.html">Home</a>
+        <a class="nav-link" href="../Resources/index.html">Resources</a>
+        <a class="nav-link current" href="./index.html" aria-current="page">Tools</a>
+        <a class="nav-link" href="../Cursors/index.html">Cursors</a>
+        <a class="nav-link nav-spaced" href="../About/index.html">About</a>
+        <a class="nav-link" href="../Work/index.html">Work</a>
+        <a class="nav-link" href="../Field%20Notes/index.html">Field Notes</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <time class="local-time" id="local-time"><span class="local-clock-value"></span><span class="local-clock-zone"></span></time>
+        <div class="social-links" aria-label="Social links">
+          <a href="https://youtube.com/c/rachelhow" aria-label="YouTube" target="_blank" rel="noreferrer"><img src="../assets/home-screen/icons/youtube.svg" alt="" /></a>
+          <a href="https://twitter.com/rachelhxw" aria-label="Twitter" target="_blank" rel="noreferrer"><img src="../assets/home-screen/icons/twitter.svg" alt="" /></a>
+          <a href="https://www.linkedin.com/in/rachelhow" aria-label="LinkedIn" target="_blank" rel="noreferrer"><img src="../assets/home-screen/icons/linkedin.svg" alt="" /></a>
+          <a href="https://instagram.com/rachelhxw" aria-label="Instagram" target="_blank" rel="noreferrer"><img src="../assets/home-screen/icons/instagram.svg" alt="" /></a>
+          <a href="mailto:rachel@rachelhow.com" aria-label="Email"><img src="../assets/home-screen/icons/email.svg" alt="" /></a>
+        </div>
+      </div>
+      <nav class="mobile-navigation" id="mobile-navigation" aria-label="Mobile primary" hidden>
+        <a href="../Home%20Screen/index.html">Home</a>
+        <a href="../Resources/index.html">Resources</a>
+        <a href="./index.html" aria-current="page">Tools</a>
+        <a href="../Cursors/index.html">Cursors</a>
+        <a href="../About/index.html">About</a>
+        <a href="../Work/index.html">Work</a>
+        <a href="../Field%20Notes/index.html">Field Notes</a>
+      </nav>
+    </aside>
+
+    <main class="page-content tools-page">
+      <div class="tools-inner">
+        <header class="tools-header">
+          <h1 class="tools-title">Tools I keep coming back to.</h1>
+        </header>
+
+        <div class="res-grid">
+          <a class="res-card" href="https://mobbin.com/rachelhow?ref=rachelhow.com" target="_blank" rel="noreferrer">
+            <span class="res-card-title">Mobbin</span>
+            <span class="res-card-tag">20% off your first year of Pro</span>
+          </a>
+
+          <a class="res-card" href="https://shadergradient.co/?ref=rachelhow.com" target="_blank" rel="noreferrer">
+            <span class="res-card-title">ShaderGradient</span>
+          </a>
+
+          <a class="res-card" href="https://recent.design/?ref=rachelhow.com" target="_blank" rel="noreferrer">
+            <span class="res-card-title">recent.design</span>
+          </a>
+
+          <a class="res-card" href="https://www.cosmos.so/?ref=rachelhow.com" target="_blank" rel="noreferrer">
+            <span class="res-card-title">Cosmos</span>
+            <img class="res-card-img" src="./assets/images/cosmos.jpg" alt="Cosmos preview" />
+          </a>
+
+          <a class="res-card" href="https://macfolio.com/?ref=rachelhow.com" target="_blank" rel="noreferrer">
+            <span class="res-card-title">Macfolio</span>
+            <img class="res-card-img" src="./assets/images/macfolio.png" alt="Macfolio preview" />
+          </a>
+
+          <a class="res-card" href="https://fontsinuse.com/?ref=rachelhow.com" target="_blank" rel="noreferrer">
+            <span class="res-card-title">Fonts In Use</span>
+            <img class="res-card-img" src="./assets/images/fontsinuse.jpg" alt="Fonts In Use preview" />
+          </a>
+
+          <a class="res-card" href="https://designspells.com/?ref=rachelhow.com" target="_blank" rel="noreferrer">
+            <span class="res-card-title">Design Spells</span>
+            <img class="res-card-img" src="./assets/images/designspells.jpg" alt="Design Spells preview" />
+          </a>
+
+          <a class="res-card" href="https://icon.museum/?ref=rachelhow.com" target="_blank" rel="noreferrer">
+            <span class="res-card-title">Icon Museum</span>
+          </a>
+
+          <a class="res-card" href="https://annualreport.gallery/?ref=rachelhow.com" target="_blank" rel="noreferrer">
+            <span class="res-card-title">Annual Report Archive</span>
+            <img class="res-card-img" src="./assets/images/annualreport.jpg" alt="Annual Report Archive preview" />
+          </a>
+
+          <a class="res-card" href="https://studyoldads.com/?ref=rachelhow.com" target="_blank" rel="noreferrer">
+            <span class="res-card-title">Study Old Ads</span>
+            <img class="res-card-img" src="./assets/images/studyoldads.png" alt="Study Old Ads preview" />
+          </a>
+
+          <a class="res-card" href="https://deck.gallery/?ref=rachelhow.com" target="_blank" rel="noreferrer">
+            <span class="res-card-title">Slide Decks Inspo</span>
+            <img class="res-card-img" src="./assets/images/deck-gallery.webp" alt="Slide Decks Inspo preview" />
+          </a>
+
+          <a class="res-card" href="https://www.fuse.kiwi/?ref=rachelhow.com" target="_blank" rel="noreferrer">
+            <span class="res-card-title">fuse.kiwi</span>
+          </a>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

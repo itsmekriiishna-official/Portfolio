@@ -1,1 +1,165 @@
-@import url("../Web%20Pages/styles.css");
+@import url("../Home Screen/style.css");
+
+:root {
+  --page-bg: #f5f2f2;
+  --panel-bg: #f5f2f2;
+  --text: #222227;
+  --muted: rgba(34, 34, 39, 0.56);
+  --line: rgba(34, 34, 39, 0.08);
+}
+
+body {
+  background: #f5f2f2;
+  color: var(--text);
+}
+
+.page-content.tools-page {
+  position: relative;
+  z-index: 1;
+  width: calc(100% - 200px);
+  min-height: 100vh;
+  margin-left: 200px;
+  padding: 28px 48px 80px;
+}
+
+.tools-inner {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.tools-header {
+  margin-bottom: 28px;
+}
+
+.tools-title {
+  margin: 0;
+  color: var(--text);
+  font-family: "PP Woodland", serif;
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  font-weight: 400;
+}
+
+.res-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.res-card {
+  position: relative;
+  display: block;
+  min-width: 0;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--panel-bg);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.res-card-title {
+  position: relative;
+  z-index: 1;
+  display: block;
+  max-width: 92%;
+  padding: 18px 18px 12px;
+  font-family: "PP Woodland", serif;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  font-weight: 400;
+}
+
+.res-card-tag {
+  position: relative;
+  z-index: 1;
+  display: block;
+  padding: 0 18px 0;
+  color: var(--muted);
+  font-family: "PP Mori", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+
+.res-card-img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 86%;
+  height: 72%;
+  object-fit: cover;
+  object-position: left top;
+  border-top-left-radius: 12px;
+  transform-origin: right bottom;
+  transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.res-card:hover .res-card-img,
+.res-card:focus-visible .res-card-img {
+  transform: scale(1.05);
+}
+
+.res-card:focus-visible {
+  outline: 2px solid #222227;
+  outline-offset: 3px;
+}
+
+@media (max-width: 1200px) {
+  .res-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .res-card {
+    aspect-ratio: 1;
+  }
+}
+
+@media (max-width: 991px) {
+  .page-content.tools-page {
+    width: auto;
+    margin: 64px 0 0;
+    padding: 24px 24px 64px;
+  }
+  .tools-inner {
+    max-width: 720px;
+  }
+  .res-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+  .tools-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .page-content.tools-page {
+    padding: 18px 18px 48px;
+  }
+  .res-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .res-card {
+    min-height: 0;
+    aspect-ratio: 1;
+    border-radius: 10px;
+  }
+  .res-card-title {
+    padding: 13px 12px 0;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .res-card-tag {
+    padding: 4px 12px 0;
+    font-size: 11px;
+  }
+  .res-card-img {
+    width: 88px;
+    height: 64px;
+    border-top-left-radius: 8px;
+  }
+}
