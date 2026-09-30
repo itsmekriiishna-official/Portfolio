@@ -1,16 +1,188 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Work | Rachel How</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" type="module"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fdfcf9" />
+  <title>Product Design | Rachel How</title>
+  <meta name="description" content="In the past 5 years, I've designed consumer-facing products, business-facing products and internal tools for brands worldwide." />
+  <link rel="preload" href="../assets/fonts/PPWoodland-Light.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../assets/fonts/PPWoodland-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../assets/fonts/PPMori-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="./styles.css" />
+  <script type="module" src="./script.js"></script>
 </head>
 <body>
-  <div class="grain-overlay" aria-hidden="true"></div>
-  <header class="mobile-header"><a href="../Home%20Screen/" class="mobile-logo">Rachel How</a><button class="mobile-menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation menu">&#9776;</button></header>
-  <aside class="sidebar" id="sidebar" aria-label="Main navigation"><div class="sidebar-top"><a href="../Home%20Screen/" class="logo-link" aria-label="Rachel How home"><svg class="rh-logo" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M6 8C6 6.895 6.895 6 8 6h7.5a5.5 5.5 0 0 1 0 11H6V8Z" stroke="#111" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 17h8.5L21 26M26 6v20" stroke="#111" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><nav class="nav-menu" aria-label="Sections"><div class="nav-group"><a href="../Home%20Screen/" class="nav-item">Home</a><a href="../Resources/" class="nav-item">Resources</a><a href="../Tools/" class="nav-item">Tools</a><a href="../Cursors/" class="nav-item">Cursors</a></div><div class="nav-group nav-group-secondary"><a href="../About/" class="nav-item">About</a><a href="../Work/" class="nav-item active" aria-current="page">Work</a><a href="../Field%20Notes/" class="nav-item">Field Notes</a></div></nav></div><div class="sidebar-bottom"><div class="live-clock-container"><span id="liveClock"></span><span class="clock-tz">MYT</span></div><div class="social-links"><a href="https://youtube.com/@rachelhow" class="social-icon" aria-label="YouTube">YT</a><a href="https://twitter.com/rachelworship" class="social-icon" aria-label="Twitter / X">X</a><a href="https://linkedin.com/in/rachelhow" class="social-icon" aria-label="LinkedIn">in</a><a href="mailto:rachel@rachelhow.com" class="social-icon" aria-label="Email">@</a></div></div></aside>
-  <main class="main-content"><section id="page-work" class="page-section active"><div class="page-header"><h1 class="page-title">Case Studies</h1><p class="page-subhead">Selected digital product design work and design systems.</p></div><div class="work-grid"><article class="work-card"><div class="work-img-wrap"><img src="../assets/images/fave_case_study.jpg" alt="Fave fintech app redesign" loading="lazy"></div><div class="work-details"><div class="work-tags"><span class="tag">Fave App</span></div><h2 class="work-title">Redesigning consumer fintech app experience for 4M users.</h2><p class="work-desc">Read the case study →</p></div></article><article class="work-card"><div class="work-img-wrap"><img src="../assets/images/desk_setup.jpg" alt="Daikin service management system" loading="lazy"></div><div class="work-details"><div class="work-tags"><span class="tag">Daikin</span></div><h2 class="work-title">All-in-one system for managing Daikin's service providers.</h2><p class="work-desc">Sneak peek →</p></div></article></div></section></main>
+  <!-- Sidebar -->
+  <aside class="sidebar" aria-label="Main navigation">
+    <div class="sidebar-head">
+      <a class="brand" href="../Home%20Screen/index.html" aria-label="Rachel How home">
+        <img src="../assets/home-screen/images/brand-mark.png" alt="Rachel How" />
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="navigation" aria-label="Primary">
+      <a class="nav-link" href="../Home%20Screen/index.html">Home</a>
+      <a class="nav-link" href="../Resources/index.html">Resources</a>
+      <a class="nav-link" href="../Tools/index.html">Tools</a>
+      <a class="nav-link" href="../Cursors/index.html">Cursors</a>
+      <a class="nav-link nav-spaced" href="../About/index.html">About</a>
+      <a class="nav-link current" href="./index.html" aria-current="page">Work</a>
+      <a class="nav-link" href="../Field%20Notes/index.html">Field Notes</a>
+    </nav>
+    <div class="sidebar-bottom">
+      <time class="local-time" id="local-time"><span class="local-clock-value"></span><span class="local-clock-zone"></span></time>
+      <div class="social-links" aria-label="Social links">
+        <a href="https://youtube.com/c/rachelhow" aria-label="YouTube" target="_blank" rel="noreferrer"><img src="../assets/home-screen/icons/youtube.svg" alt="" /></a>
+        <a href="https://twitter.com/rachelhxw" aria-label="Twitter" target="_blank" rel="noreferrer"><img src="../assets/home-screen/icons/twitter.svg" alt="" /></a>
+        <a href="https://www.linkedin.com/in/rachelhow" aria-label="LinkedIn" target="_blank" rel="noreferrer"><img src="../assets/home-screen/icons/linkedin.svg" alt="" /></a>
+        <a href="https://instagram.com/rachelhxw" aria-label="Instagram" target="_blank" rel="noreferrer"><img src="../assets/home-screen/icons/instagram.svg" alt="" /></a>
+        <a href="mailto:rachel@rachelhow.com" aria-label="Email"><img src="../assets/home-screen/icons/email.svg" alt="" /></a>
+      </div>
+    </div>
+    <nav class="mobile-navigation" id="mobile-navigation" aria-label="Mobile primary" hidden>
+      <a href="../Home%20Screen/index.html">Home</a>
+      <a href="../Resources/index.html">Resources</a>
+      <a href="../Tools/index.html">Tools</a>
+      <a href="../Cursors/index.html">Cursors</a>
+      <a href="../About/index.html">About</a>
+      <a href="./index.html" aria-current="page">Work</a>
+      <a href="../Field%20Notes/index.html">Field Notes</a>
+    </nav>
+  </aside>
+
+  <!-- Main content -->
+  <main class="page-content work-page">
+    <div class="work-container">
+
+      <!-- ── Section 1: Case Studies ── -->
+      <section class="section mb-36 first-section">
+        <h1 class="section-heading">Case Studies</h1>
+
+        <div class="projects-masonry-grid">
+
+          <!-- 1. Fave App (Left Column top) -->
+          <a href="#" class="case-study-card space-below">
+            <div class="cs-thumbnail-wrap">
+              <img src="../assets/design/fave-app.webp" loading="lazy" alt="Fave app redesign" class="case-study-thumbnail" />
+            </div>
+            <div class="case-study-card-details">
+              <div class="caption">Fave App</div>
+              <h2 class="cs-card-title">Redesigning consumer fintech app experience for 4M users.</h2>
+              <div class="cs-text-link">
+                <span class="text-link">Read the case study</span>
+                <img src="../assets/design/arrow-right-circle.svg" loading="lazy" alt="" class="cs-arrow" />
+              </div>
+            </div>
+          </a>
+
+          <!-- 2. Fave Landing Page (Left Column middle) -->
+          <a href="#" class="case-study-card space-below">
+            <div class="cs-thumbnail-wrap">
+              <img src="../assets/design/fave-landing.webp" loading="lazy" alt="Fave Landing Page" class="case-study-thumbnail" />
+            </div>
+            <div class="case-study-card-details">
+              <div class="caption">Fave Landing Page</div>
+              <h2 class="cs-card-title">Increasing app installs by 600% on Fave's new landing page.</h2>
+              <div class="cs-text-link">
+                <span class="text-link">Read the case study</span>
+                <img src="../assets/design/arrow-right-circle.svg" loading="lazy" alt="" class="cs-arrow" />
+              </div>
+            </div>
+          </a>
+
+          <!-- 3. Cultiveat (Left Column bottom - no link) -->
+          <div class="case-study-card space-below">
+            <div class="cs-thumbnail-wrap">
+              <img src="../assets/design/cultiveat.png" loading="lazy" alt="Cultiveat" class="case-study-thumbnail" />
+            </div>
+            <div class="case-study-card-details">
+              <div class="caption">Cultiveat</div>
+              <h2 class="cs-card-title">Scaling internal operations for an agri-food tech startup.</h2>
+            </div>
+          </div>
+
+          <!-- 4. Daikin (Right Column top) -->
+          <a href="#" class="case-study-card space-below">
+            <div class="cs-thumbnail-wrap">
+              <img src="../assets/design/daikin.webp" loading="lazy" alt="Daikin" class="case-study-thumbnail" />
+            </div>
+            <div class="case-study-card-details">
+              <div class="caption-logo">
+                <img src="../assets/design/daikin-logo.png" loading="lazy" width="106" alt="Daikin" class="daikin-brand-logo" />
+              </div>
+              <h2 class="cs-card-title">All-in-one system for managing Daikin's service providers.</h2>
+              <div class="cs-text-link">
+                <span class="text-link">Sneak peek</span>
+                <img src="../assets/design/arrow-right-circle.svg" loading="lazy" alt="" class="cs-arrow" />
+              </div>
+            </div>
+          </a>
+
+          <!-- 5. Sparq Coffee (Right Column bottom) -->
+          <a href="#" class="case-study-card space-below">
+            <div class="cs-thumbnail-wrap">
+              <img src="../assets/design/sparq.webp" loading="lazy" alt="Sparq Coffee" class="case-study-thumbnail" />
+            </div>
+            <div class="case-study-card-details">
+              <div class="caption">Sparq Coffee</div>
+              <h2 class="cs-card-title">Designing an ordering experience for a local café.</h2>
+              <div class="cs-text-link">
+                <span class="text-link">Sneak peek</span>
+                <img src="../assets/design/arrow-right-circle.svg" loading="lazy" alt="" class="cs-arrow" />
+              </div>
+            </div>
+          </a>
+
+        </div><!-- /projects-masonry-grid -->
+      </section>
+
+      <!-- ── Section 2: Archive ── -->
+      <section class="section mb-48 archive-section">
+        <div class="archive-header">
+          <p class="short-subtitle">An archive of products I’ve designed.</p>
+        </div>
+
+        <!-- Row 1: 3 cards side-by-side -->
+        <div class="archive-grid-row-3">
+          <div class="archive-cell">
+            <img src="../assets/design/block-03.png" loading="lazy" alt="Product archive item 1" class="radius-16" />
+          </div>
+          <div class="archive-cell">
+            <img src="../assets/design/block-04.png" loading="lazy" alt="Product archive item 2" class="radius-16" />
+          </div>
+          <div class="archive-cell">
+            <img src="../assets/design/block-05.png" loading="lazy" alt="Product archive item 3" class="radius-16" />
+          </div>
+        </div>
+
+        <!-- Row 2: 1 full-width card -->
+        <div class="archive-grid-row-1">
+          <div class="archive-cell">
+            <img src="../assets/design/block-07.png" loading="lazy" alt="Product archive item full-width" class="radius-16" />
+          </div>
+        </div>
+
+        <!-- Row 3: 2 video-backed cards side-by-side -->
+        <div class="archive-grid-row-2">
+          <div class="archive-video-cell radius-16">
+            <video autoplay loop muted playsinline poster="../assets/design/block-09-poster.jpg" class="archive-video">
+              <source src="../assets/design/video-block-09.mp4" type="video/mp4" />
+            </video>
+            <img src="../assets/design/block-09-poster.jpg" alt="" class="archive-poster-fallback" />
+          </div>
+          <div class="archive-video-cell radius-16">
+            <video autoplay loop muted playsinline poster="../assets/design/block-10-poster.jpg" class="archive-video">
+              <source src="../assets/design/video-block-10.mp4" type="video/mp4" />
+            </video>
+            <img src="../assets/design/block-10-poster.jpg" alt="" class="archive-poster-fallback" />
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /work-container -->
+  </main>
 </body>
 </html>
