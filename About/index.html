@@ -1,16 +1,116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | Rachel How</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" type="module"></script>
-</head>
-<body>
-  <div class="grain-overlay" aria-hidden="true"></div>
-  <header class="mobile-header"><a href="../Home%20Screen/" class="mobile-logo">Rachel How</a><button class="mobile-menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation menu">&#9776;</button></header>
-  <aside class="sidebar" id="sidebar" aria-label="Main navigation"><div class="sidebar-top"><a href="../Home%20Screen/" class="logo-link" aria-label="Rachel How home"><svg class="rh-logo" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M6 8C6 6.895 6.895 6 8 6h7.5a5.5 5.5 0 0 1 0 11H6V8Z" stroke="#111" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 17h8.5L21 26M26 6v20" stroke="#111" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><nav class="nav-menu" aria-label="Sections"><div class="nav-group"><a href="../Home%20Screen/" class="nav-item">Home</a><a href="../Resources/" class="nav-item">Resources</a><a href="../Tools/" class="nav-item">Tools</a><a href="../Cursors/" class="nav-item">Cursors</a></div><div class="nav-group nav-group-secondary"><a href="../About/" class="nav-item active" aria-current="page">About</a><a href="../Work/" class="nav-item">Work</a><a href="../Field%20Notes/" class="nav-item">Field Notes</a></div></nav></div><div class="sidebar-bottom"><div class="live-clock-container"><span id="liveClock"></span><span class="clock-tz">MYT</span></div><div class="social-links"><a href="https://youtube.com/@rachelhow" class="social-icon" aria-label="YouTube">YT</a><a href="https://twitter.com/rachelworship" class="social-icon" aria-label="Twitter / X">X</a><a href="https://linkedin.com/in/rachelhow" class="social-icon" aria-label="LinkedIn">in</a><a href="mailto:rachel@rachelhow.com" class="social-icon" aria-label="Email">@</a></div></div></aside>
-  <main class="main-content"><section id="page-about" class="page-section active"><div class="about-container"><div class="about-hero"><div class="about-portrait-wrap"><img src="../assets/images/rachel_portrait.jpg" alt="Portrait of Rachel How" class="about-portrait"></div><div class="about-intro"><h1 class="about-name">Hi! I'm Rachel How.</h1><p class="about-tagline">Designer, YouTuber &amp; Video Lead at Mobbin based in Kuala Lumpur.</p></div></div><div class="about-body"><div class="about-block"><h2>Making videos on YouTube</h2><p>I talk about product design, building apps and websites, and creative work.</p></div><div class="about-block"><h2>Video Lead at Mobbin</h2><p>I help make product design knowledge more useful and accessible through video.</p></div><div class="about-block"><h2>Side quests &amp; demo nights</h2><p>Small experiments, offline gatherings, and curious things made with friends.</p></div><div class="signature-block"><p class="sign-text">With love,</p><div class="signature-svg"><span class="handwritten-sign">- Rachel</span></div></div></div></div></section></main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f2f2" />
+    <title>About | Rachel How</title>
+    <meta name="description" content="About Rachel How: designer, YouTuber, and video lead based in Kuala Lumpur." />
+    <link rel="preload" href="../assets/fonts/PPWoodland-Light.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../assets/fonts/PPWoodland-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../assets/fonts/PPMori-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="./styles.css?v=1" />
+    <script src="./script.js?v=1" type="module"></script>
+  </head>
+  <body>
+    <aside class="sidebar" aria-label="Main navigation">
+      <div class="sidebar-head">
+        <a class="brand" href="../Home%20Screen/index.html" aria-label="Rachel How home"><img src="../assets/home-screen/images/brand-mark.png" alt="Rachel How" /></a>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-navigation"><span></span><span></span><span></span></button>
+      </div>
+      <nav class="navigation" aria-label="Primary">
+        <a class="nav-link" href="../Home%20Screen/index.html">Home</a>
+        <a class="nav-link" href="../Resources/index.html">Resources</a>
+        <a class="nav-link" href="../Tools/index.html">Tools</a>
+        <a class="nav-link" href="../Cursors/index.html">Cursors</a>
+        <a class="nav-link nav-spaced" href="./index.html" aria-current="page">About</a>
+        <a class="nav-link" href="../Work/index.html">Work</a>
+        <a class="nav-link" href="../Field%20Notes/index.html">Field Notes</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <time class="local-time" id="local-time"><span class="local-clock-value"></span><span class="local-clock-zone"></span></time>
+        <div class="social-links" aria-label="Social links">
+          <a href="https://youtube.com/c/rachelhow" aria-label="YouTube" target="_blank" rel="noreferrer"><img src="../assets/home-screen/icons/youtube.svg" alt="" /></a>
+          <a href="https://twitter.com/rachelhxw" aria-label="Twitter" target="_blank" rel="noreferrer"><img src="../assets/home-screen/icons/twitter.svg" alt="" /></a>
+          <a href="https://www.linkedin.com/in/rachelhow" aria-label="LinkedIn" target="_blank" rel="noreferrer"><img src="../assets/home-screen/icons/linkedin.svg" alt="" /></a>
+          <a href="https://instagram.com/rachelhxw" aria-label="Instagram" target="_blank" rel="noreferrer"><img src="../assets/home-screen/icons/instagram.svg" alt="" /></a>
+          <a href="mailto:rachel@rachelhow.com" aria-label="Email"><img src="../assets/home-screen/icons/email.svg" alt="" /></a>
+        </div>
+      </div>
+      <nav class="mobile-navigation" id="mobile-navigation" aria-label="Mobile primary" hidden>
+        <a href="../Home%20Screen/index.html">Home</a>
+        <a href="../Resources/index.html">Resources</a>
+        <a href="../Tools/index.html">Tools</a>
+        <a href="../Cursors/index.html">Cursors</a>
+        <a href="./index.html" aria-current="page">About</a>
+        <a href="../Work/index.html">Work</a>
+        <a href="../Field%20Notes/index.html">Field Notes</a>
+      </nav>
+    </aside>
+
+    <main class="page-content about-page">
+      <div class="about-layout">
+        <div class="about-column">
+          <img class="about-photo about-hero-image" src="./assets/images/hero-rachel.webp" alt="Rachel How" width="882" height="588" />
+
+          <section class="about-offset about-intro" aria-labelledby="about-title">
+            <h1 class="about-heading" id="about-title">Hi! I'm Rachel How.</h1>
+            <div class="about-now-row">
+              <a class="about-link" href="https://youtube.com/@rachelhow" target="_blank" rel="noopener noreferrer">Making videos on YouTube <span aria-hidden="true">↗</span></a>
+              <p>I talk about product design, apps, and websites. 270K subscribers.</p>
+            </div>
+            <div class="about-now-row">
+              <a class="about-link" href="https://youtube.com/@mobbindesign" target="_blank" rel="noopener noreferrer">Video Lead at Mobbin <span aria-hidden="true">↗</span></a>
+              <p>Helped grow the channel from 200 to more than 10,000 subscribers in two months.</p>
+            </div>
+            <div class="about-now-row">
+              <a class="about-link" href="https://sidequest.camp" target="_blank" rel="noopener noreferrer">Hosting demo nights <span aria-hidden="true">↗</span></a>
+              <p>Bringing creative communities together, especially in Southeast Asia.</p>
+            </div>
+          </section>
+
+          <section class="about-offset about-talks" aria-labelledby="talks-title">
+            <img class="about-photo about-speaking-image" src="./assets/images/speaking.jpg" alt="Rachel How speaking on stage" width="1024" height="682" />
+            <h2 class="about-heading about-heading-spaced" id="talks-title">Selected Talks &amp; Features</h2>
+            <div class="about-milestones">
+              <p>Desk setup featured on <a href="https://workspaces.xyz/p/542-rachel-how" target="_blank" rel="noopener noreferrer">Workspaces</a>, Aug 2026</p>
+              <p>Designing Memorable Software, AI Malaysia Takeover 2026, Aug 2026</p>
+              <p>Figma Billboard, Ten Square Singapore, Nov 2025</p>
+              <p>Panel Discussion, Friends of Figma, ADPList, LottieFiles &amp; Xendit, Feb 2024</p>
+              <p>Winner, MYStartup x Petronas Hackathon, July 2023</p>
+              <p>Women Who Code Kuala Lumpur, Product Design for Product Managers, Mar 2021</p>
+              <p>Friends of Figma Kuala Lumpur, Dec 2020</p>
+              <p>Monash University Malaysia, Sep 2020</p>
+              <p>Top 10 Team, CYHI Hackathon by Hong Leong Bank, Apr 2019</p>
+            </div>
+          </section>
+
+          <section class="about-offset about-story" aria-labelledby="story-title">
+            <div class="about-story-photos">
+              <img class="about-photo" src="./assets/images/san-francisco.jpg" alt="Rachel How at the Golden Gate Bridge" width="576" height="1024" />
+              <img class="about-photo" src="./assets/images/studio.jpg" alt="Rachel How's filming studio" width="1024" height="576" />
+            </div>
+            <h2 class="about-heading" id="story-title">My story</h2>
+            <p>I grew up in Kuala Lumpur and thought working hard would guarantee a particular outcome. Missing out on a scholarship was an early lesson that it doesn't always work that way.</p>
+            <p>I started studying law in 2015, then left after three months. Over the next few years I tried several jobs, from customer service and retail to real estate, advertising, and digital marketing.</p>
+            <p>A detour into forex ended with me losing about $5,000 to a scam. It taught me to be more careful about chasing shortcuts.</p>
+            <p>After another job that didn't feel right, I decided to try design.</p>
+            <p>At a 24-hour hackathon in 2019, I joined two strangers, and our team placed in the top ten. I left with my first UI/UX job offer and soon joined Fave as a product designer.</p>
+            <p>During the pandemic I started making YouTube videos and learned Final Cut Pro as I went. The channel reached 10,000 subscribers a few months later; I left my job in 2022.</p>
+            <p>Today I'm Video Lead at <a href="https://youtube.com/@mobbindesign" target="_blank" rel="noopener noreferrer">Mobbin</a>. The channel grew from 200 to more than 10,000 subscribers in two months.</p>
+            <p>A visit to San Francisco inspired me to host demo nights with my friend Joe at <a href="https://sidequest.camp" target="_blank" rel="noopener noreferrer">sidequest.camp</a>, bringing people together through creative work.</p>
+            <p>To be continued :)</p>
+          </section>
+
+          <img class="about-photo about-office-image" src="./assets/images/home-office.jpg" alt="Rachel How's home office" width="1918" height="1279" />
+
+          <section class="about-offset about-find" aria-labelledby="find-title">
+            <h2 class="about-heading" id="find-title">Find me online</h2>
+            <p>You can find me on <a href="https://youtube.com/c/rachelhow" target="_blank" rel="noopener noreferrer">YouTube</a>, <a href="https://twitter.com/rachelhxw" target="_blank" rel="noopener noreferrer">Twitter</a>, <a href="https://instagram.com/rachelhxw" target="_blank" rel="noopener noreferrer">Instagram</a>, and <a href="https://www.linkedin.com/in/rachelhow" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
+            <div class="about-signoff"><span>Thanks for dropping by!<br />I hope you find something useful here.</span><span>—Rachel</span></div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

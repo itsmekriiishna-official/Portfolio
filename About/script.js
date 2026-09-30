@@ -1,1 +1,1 @@
-import "../Web%20Pages/app.js";
+import "../Cursors/js/script.js";
