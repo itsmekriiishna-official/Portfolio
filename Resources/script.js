@@ -30,6 +30,7 @@ window.setInterval(updateClock, 1000);
 
 const tabs = [...document.querySelectorAll('.resource-tab')];
 const cards = [...document.querySelectorAll('.featured-card')];
+const resourceBackground = document.querySelector('.resources-atmosphere img');
 const resourceImageUrls = typeof import.meta.glob === 'function'
   ? import.meta.glob('./assets/images/*.{png,webp}', { eager: true, query: '?url', import: 'default' })
   : null;
