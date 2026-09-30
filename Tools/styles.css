@@ -205,6 +205,14 @@ body {
   background: linear-gradient(135deg, rgba(34, 34, 39, 0.88), rgba(34, 34, 39, 0.54));
 }
 
+@media (min-width: 1800px) {
+  .tools-section {
+    max-width: none;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
 @media (max-width: 1200px) {
   .home-projects-grid {
     column-count: 2;

@@ -1,16 +1,158 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cursors | Rachel How</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" type="module"></script>
-</head>
-<body>
-  <div class="grain-overlay" aria-hidden="true"></div>
-  <header class="mobile-header"><a href="../Home%20Screen/" class="mobile-logo">Rachel How</a><button class="mobile-menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation menu">&#9776;</button></header>
-  <aside class="sidebar" id="sidebar" aria-label="Main navigation"><div class="sidebar-top"><a href="../Home%20Screen/" class="logo-link" aria-label="Rachel How home"><svg class="rh-logo" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M6 8C6 6.895 6.895 6 8 6h7.5a5.5 5.5 0 0 1 0 11H6V8Z" stroke="#111" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 17h8.5L21 26M26 6v20" stroke="#111" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a><nav class="nav-menu" aria-label="Sections"><div class="nav-group"><a href="../Home%20Screen/" class="nav-item">Home</a><a href="../Resources/" class="nav-item">Resources</a><a href="../Tools/" class="nav-item">Tools</a><a href="../Cursors/" class="nav-item active" aria-current="page">Cursors</a></div><div class="nav-group nav-group-secondary"><a href="../About/" class="nav-item">About</a><a href="../Work/" class="nav-item">Work</a><a href="../Field%20Notes/" class="nav-item">Field Notes</a></div></nav></div><div class="sidebar-bottom"><div class="live-clock-container"><span id="liveClock"></span><span class="clock-tz">MYT</span></div><div class="social-links"><a href="https://youtube.com/@rachelhow" class="social-icon" aria-label="YouTube">YT</a><a href="https://twitter.com/rachelworship" class="social-icon" aria-label="Twitter / X">X</a><a href="https://linkedin.com/in/rachelhow" class="social-icon" aria-label="LinkedIn">in</a><a href="mailto:rachel@rachelhow.com" class="social-icon" aria-label="Email">@</a></div></div></aside>
-  <main class="main-content"><section id="page-cursors" class="page-section active"><div class="page-header"><h1 class="page-title">Custom Cursors</h1><p class="page-subhead">A small collection of playful cursor experiments.</p></div><div class="cursors-grid"><article class="cursor-box cursor-star"><div class="cursor-icon">✦</div><h3>Berd</h3><p>A bright cursor spotted on berd.xyz.</p></article><article class="cursor-box cursor-retro"><div class="cursor-icon">▣</div><h3>denisgurcu.com</h3><p>A custom cursor spotted on denisgurcu.com.</p></article><article class="cursor-box cursor-bubble"><div class="cursor-icon">◌</div><h3>interfaces.new</h3><p>A custom cursor spotted on interfaces.new.</p></article><article class="cursor-box cursor-crosshair"><div class="cursor-icon">+</div><h3>tinycamp.site</h3><p>A focused cursor experiment.</p></article></div></section></main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f2f2" />
+    <title>Cursors | Rachel How</title>
+    <meta name="description" content="Custom cursors spotted on random desktop sites." />
+    <link rel="preload" href="../assets/fonts/PPWoodland-Light.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../assets/fonts/PPWoodland-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../assets/fonts/PPMori-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="./css/style.css?v=6" />
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <aside class="sidebar" aria-label="Main navigation">
+      <div class="sidebar-head">
+        <a class="brand" href="../Home%20Screen/index.html" aria-label="Rachel How home"><img src="../assets/home-screen/images/brand-mark.png" alt="Rachel How" /></a>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-navigation"><span></span><span></span><span></span></button>
+      </div>
+      <nav class="navigation" aria-label="Primary">
+        <a class="nav-link" href="../Home%20Screen/index.html">Home</a>
+        <a class="nav-link" href="../Resources/index.html">Resources</a>
+        <a class="nav-link" href="../Tools/index.html">Tools</a>
+        <a class="nav-link current" href="./index.html" aria-current="page">Cursors</a>
+        <a class="nav-link nav-spaced" href="../About/index.html">About</a>
+        <a class="nav-link" href="../Work/index.html">Work</a>
+        <a class="nav-link" href="../Field%20Notes/index.html">Field Notes</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <time class="local-time" id="local-time"><span class="local-clock-value"></span><span class="local-clock-zone"></span></time>
+        <div class="social-links" aria-label="Social links">
+          <a href="https://youtube.com/c/rachelhow" aria-label="YouTube" target="_blank" rel="noreferrer"><img src="../assets/home-screen/icons/youtube.svg" alt="" /></a>
+          <a href="https://twitter.com/rachelhxw" aria-label="Twitter" target="_blank" rel="noreferrer"><img src="../assets/home-screen/icons/twitter.svg" alt="" /></a>
+          <a href="https://www.linkedin.com/in/rachelhow" aria-label="LinkedIn" target="_blank" rel="noreferrer"><img src="../assets/home-screen/icons/linkedin.svg" alt="" /></a>
+          <a href="https://instagram.com/rachelhxw" aria-label="Instagram" target="_blank" rel="noreferrer"><img src="../assets/home-screen/icons/instagram.svg" alt="" /></a>
+          <a href="mailto:rachel@rachelhow.com" aria-label="Email"><img src="../assets/home-screen/icons/email.svg" alt="" /></a>
+        </div>
+      </div>
+      <nav class="mobile-navigation" id="mobile-navigation" aria-label="Mobile primary" hidden>
+        <a href="../Home%20Screen/index.html">Home</a>
+        <a href="../Resources/index.html">Resources</a>
+        <a href="../Tools/index.html">Tools</a>
+        <a href="./index.html" aria-current="page">Cursors</a>
+        <a href="../About/index.html">About</a>
+        <a href="../Work/index.html">Work</a>
+        <a href="../Field%20Notes/index.html">Field Notes</a>
+      </nav>
+    </aside>
+
+    <main class="page-content tools-page cursors-page">
+      <section class="tools-section cursors-section" aria-labelledby="cursors-title">
+        <header class="tools-header cursors-header">
+          <h1 id="cursors-title" class="tools-title cursors-title"><span class="tools-title-primary">Custom cursors</span> <span class="tools-title-muted">I’ve spotted on random desktop sites</span><img class="cursors-title-icon" src="./assets/images/pixel-cursor.png" alt="" aria-hidden="true" /></h1>
+        </header>
+
+        <div class="home-projects-grid cursors-grid">
+          <article class="case-study-card home-project-card space-below is-mid">
+            <div class="home-project-media">
+              <video class="case-study-thumbnail home-project-thumb" autoplay loop muted playsinline aria-label="Berd cursor preview"><source src="./assets/images/berd.mp4" type="video/mp4" /></video>
+              <div class="home-project-blur" aria-hidden="true"></div><div class="home-project-dim" aria-hidden="true"></div>
+              <div class="home-project-copy"><h3 class="home-project-title">Berd</h3></div>
+              <a class="home-project-arrow" href="https://berd.xyz/?ref=rachelhow.com" target="_blank" rel="noopener noreferrer" aria-label="Open Berd"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H10M17 7V14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="home-project-arrow-label">Open Berd</span></a>
+            </div>
+          </article>
+          <article class="case-study-card home-project-card space-below is-wide">
+            <div class="home-project-media">
+              <video class="case-study-thumbnail home-project-thumb" autoplay loop muted playsinline aria-label="denisgurcu.com cursor preview"><source src="./assets/images/denisgurcu.mp4" type="video/mp4" /></video>
+              <div class="home-project-blur" aria-hidden="true"></div><div class="home-project-dim" aria-hidden="true"></div>
+              <div class="home-project-copy"><h3 class="home-project-title">denisgurcu.com</h3></div>
+              <a class="home-project-arrow" href="https://denisgurcu.com/?ref=rachelhow.com" target="_blank" rel="noopener noreferrer" aria-label="Open denisgurcu.com"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H10M17 7V14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="home-project-arrow-label">Open denisgurcu.com</span></a>
+            </div>
+          </article>
+          <article class="case-study-card home-project-card space-below is-wide">
+            <div class="home-project-media">
+              <video class="case-study-thumbnail home-project-thumb" autoplay loop muted playsinline aria-label="interfaces.new cursor preview"><source src="./assets/images/interfaces-new.mp4" type="video/mp4" /></video>
+              <div class="home-project-blur" aria-hidden="true"></div><div class="home-project-dim" aria-hidden="true"></div>
+              <div class="home-project-copy"><h3 class="home-project-title">interfaces.new</h3></div>
+              <a class="home-project-arrow" href="https://www.interfaces.new/?ref=rachelhow.com" target="_blank" rel="noopener noreferrer" aria-label="Open interfaces.new"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H10M17 7V14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="home-project-arrow-label">Open interfaces.new</span></a>
+            </div>
+          </article>
+          <article class="case-study-card home-project-card space-below is-wide">
+            <div class="home-project-media">
+              <video class="case-study-thumbnail home-project-thumb" autoplay loop muted playsinline aria-label="tinycamp.site cursor preview"><source src="./assets/images/tinycamp.mp4" type="video/mp4" /></video>
+              <div class="home-project-blur" aria-hidden="true"></div><div class="home-project-dim" aria-hidden="true"></div>
+              <div class="home-project-copy"><h3 class="home-project-title">tinycamp.site</h3></div>
+              <a class="home-project-arrow" href="https://www.chloeyan.me/digital-spaces/campsite?ref=rachelhow.com" target="_blank" rel="noopener noreferrer" aria-label="Open tinycamp.site"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H10M17 7V14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="home-project-arrow-label">Open tinycamp.site</span></a>
+            </div>
+          </article>
+          <article class="case-study-card home-project-card space-below">
+            <div class="home-project-media">
+              <video class="case-study-thumbnail home-project-thumb" autoplay loop muted playsinline aria-label="itsiddharth.design cursor preview"><source src="./assets/images/itsiddharth.mp4" type="video/mp4" /></video>
+              <div class="home-project-blur" aria-hidden="true"></div><div class="home-project-dim" aria-hidden="true"></div>
+              <div class="home-project-copy"><h3 class="home-project-title">itsiddharth.design</h3></div>
+              <a class="home-project-arrow" href="https://itsiddharth.design/?ref=rachelhow.com" target="_blank" rel="noopener noreferrer" aria-label="Open itsiddharth.design"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H10M17 7V14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="home-project-arrow-label">Open itsiddharth.design</span></a>
+            </div>
+          </article>
+          <article class="case-study-card home-project-card space-below is-wide">
+            <div class="home-project-media">
+              <video class="case-study-thumbnail home-project-thumb" autoplay loop muted playsinline aria-label="recent.design cursor preview"><source src="./assets/images/recent.mp4" type="video/mp4" /></video>
+              <div class="home-project-blur" aria-hidden="true"></div><div class="home-project-dim" aria-hidden="true"></div>
+              <div class="home-project-copy"><h3 class="home-project-title">recent.design</h3></div>
+              <a class="home-project-arrow" href="https://recent.design/?ref=rachelhow.com" target="_blank" rel="noopener noreferrer" aria-label="Open recent.design"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H10M17 7V14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="home-project-arrow-label">Open recent.design</span></a>
+            </div>
+          </article>
+          <article class="case-study-card home-project-card space-below is-wide">
+            <div class="home-project-media">
+              <video class="case-study-thumbnail home-project-thumb" autoplay loop muted playsinline aria-label="sidequest.camp cursor preview"><source src="./assets/images/sidequest.mp4" type="video/mp4" /></video>
+              <div class="home-project-blur" aria-hidden="true"></div><div class="home-project-dim" aria-hidden="true"></div>
+              <div class="home-project-copy"><h3 class="home-project-title">sidequest.camp</h3></div>
+              <a class="home-project-arrow" href="https://sidequest.camp/?ref=rachelhow.com" target="_blank" rel="noopener noreferrer" aria-label="Open sidequest.camp"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H10M17 7V14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="home-project-arrow-label">Open sidequest.camp</span></a>
+            </div>
+          </article>
+          <article class="case-study-card home-project-card space-below">
+            <div class="home-project-media">
+              <video class="case-study-thumbnail home-project-thumb" autoplay loop muted playsinline aria-label="offscript.vc cursor preview"><source src="./assets/images/offscript.mp4" type="video/mp4" /></video>
+              <div class="home-project-blur" aria-hidden="true"></div><div class="home-project-dim" aria-hidden="true"></div>
+              <div class="home-project-copy"><h3 class="home-project-title">offscript.vc</h3></div>
+              <a class="home-project-arrow" href="https://offscript.vc/?ref=rachelhow.com" target="_blank" rel="noopener noreferrer" aria-label="Open offscript.vc"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H10M17 7V14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="home-project-arrow-label">Open offscript.vc</span></a>
+            </div>
+          </article>
+          <article class="case-study-card home-project-card space-below is-fit">
+            <div class="home-project-media">
+              <video class="case-study-thumbnail home-project-thumb" autoplay loop muted playsinline aria-label="config.floguo.com cursor preview"><source src="./assets/images/config-floguo.mp4" type="video/mp4" /></video>
+              <div class="home-project-blur" aria-hidden="true"></div><div class="home-project-dim" aria-hidden="true"></div>
+              <div class="home-project-copy"><h3 class="home-project-title">config.floguo.com</h3></div>
+              <a class="home-project-arrow" href="https://config.floguo.com/?ref=rachelhow.com" target="_blank" rel="noopener noreferrer" aria-label="Open config.floguo.com"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H10M17 7V14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="home-project-arrow-label">Open config.floguo.com</span></a>
+            </div>
+          </article>
+          <article class="case-study-card home-project-card space-below is-wide">
+            <div class="home-project-media">
+              <video class="case-study-thumbnail home-project-thumb" autoplay loop muted playsinline aria-label="sandstudio.shop cursor preview"><source src="./assets/images/sandstudio.mp4" type="video/mp4" /></video>
+              <div class="home-project-blur" aria-hidden="true"></div><div class="home-project-dim" aria-hidden="true"></div>
+              <div class="home-project-copy"><h3 class="home-project-title">sandstudio.shop</h3></div>
+              <a class="home-project-arrow" href="https://www.sandstudio.shop/?ref=rachelhow.com" target="_blank" rel="noopener noreferrer" aria-label="Open sandstudio.shop"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H10M17 7V14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="home-project-arrow-label">Open sandstudio.shop</span></a>
+            </div>
+          </article>
+          <article class="case-study-card home-project-card space-below">
+            <div class="home-project-media">
+              <video class="case-study-thumbnail home-project-thumb" autoplay loop muted playsinline aria-label="craft.wild.as cursor preview"><source src="./assets/images/craft.mp4" type="video/mp4" /></video>
+              <div class="home-project-blur" aria-hidden="true"></div><div class="home-project-dim" aria-hidden="true"></div>
+              <div class="home-project-copy"><h3 class="home-project-title">craft.wild.as</h3></div>
+              <a class="home-project-arrow" href="https://craft.wild.as/?ref=rachelhow.com" target="_blank" rel="noopener noreferrer" aria-label="Open craft.wild.as"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H10M17 7V14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="home-project-arrow-label">Open craft.wild.as</span></a>
+            </div>
+          </article>
+          <article class="case-study-card home-project-card space-below is-mid">
+            <div class="home-project-media">
+              <video class="case-study-thumbnail home-project-thumb" autoplay loop muted playsinline aria-label="jackiehu.design cursor preview"><source src="./assets/images/jackiehu.mp4" type="video/mp4" /></video>
+              <div class="home-project-blur" aria-hidden="true"></div><div class="home-project-dim" aria-hidden="true"></div>
+              <div class="home-project-copy"><h3 class="home-project-title">jackiehu.design</h3></div>
+              <a class="home-project-arrow" href="https://jackiehu.design/?ref=rachelhow.com" target="_blank" rel="noopener noreferrer" aria-label="Open jackiehu.design"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H10M17 7V14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="home-project-arrow-label">Open jackiehu.design</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
