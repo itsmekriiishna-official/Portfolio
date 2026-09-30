@@ -63,6 +63,7 @@ function selectTab(tab) {
 }
 tabs.forEach((tab, index) => {
   tab.addEventListener('click', () => selectTab(tab));
+  tab.addEventListener('pointerenter', () => selectTab(tab));
   tab.addEventListener('keydown', (event) => {
     if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
     event.preventDefault();
