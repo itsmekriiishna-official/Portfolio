@@ -13,5 +13,6 @@ The canonical route tree lives in `Web Pages/`:
   - `/Web Pages/cursors/` Cursors
     - `/Web Pages/cursors/collections/` Cursor Collections
   - `/Web Pages/resources/` Resources
+  - `/Sunset/` Design Your Sunset (Realistic sunset gradient studio)
 
 Root-level section folders are retained as compatibility routes for existing links.

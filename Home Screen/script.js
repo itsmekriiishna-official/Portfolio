@@ -112,3 +112,10 @@ function updateClock() {
 }
 updateClock();
 window.setInterval(updateClock, 1000);
+
+// Navigate to Sunset Studio
+const sunsetCard = document.querySelector('.card-sunset');
+sunsetCard?.addEventListener('click', (event) => {
+  if (event.target.closest('a')) return;
+  window.location.href = '../Sunset/index.html';
+});

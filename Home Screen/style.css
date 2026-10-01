@@ -168,7 +168,7 @@ body {
 .card-demo { height: 502.734px; }
 .card-cat { height: 540.516px; }
 .card-dumplings { height: 569.953px; }
-.card-sunset { height: 478.797px; }
+.card-sunset { height: 478.797px; cursor: pointer; }
 .photo-gallery { height: 851.203px; cursor: grab; touch-action: pan-y; user-select: none; }
 .photo-gallery:active { cursor: grabbing; }
 .carousel-track { display: flex; width: 100%; height: 100%; will-change: transform; transition: transform 450ms cubic-bezier(.22, 1, .36, 1); }
